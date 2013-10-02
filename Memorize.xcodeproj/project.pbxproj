@@ -22,6 +22,11 @@
 		321ACA0617F76A7F00773D4D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321AC9EA17F76A7F00773D4D /* CoreData.framework */; };
 		321ACA0E17F76A7F00773D4D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 321ACA0C17F76A7F00773D4D /* InfoPlist.strings */; };
 		321ACA1017F76A7F00773D4D /* MemorizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 321ACA0F17F76A7F00773D4D /* MemorizeTests.m */; };
+		321ACA1A17F76AA400773D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321ACA1917F76AA400773D4D /* Main.storyboard */; };
+		322FEDD317F7C2DD007B4AC3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322FEDD217F7C2DD007B4AC3 /* MasterViewController.m */; };
+		322FEDD617F7C4C0007B4AC3 /* ReviewTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */; };
+		3255F58D17FC524D00ECFB02 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3255F58C17FC524D00ECFB02 /* ReviewViewController.m */; };
+		3278D6D517F9B98500632B49 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278D6D417F9B98500632B49 /* StatsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,16 @@
 		321ACA0B17F76A7F00773D4D /* MemorizeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MemorizeTests-Info.plist"; sourceTree = "<group>"; };
 		321ACA0D17F76A7F00773D4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		321ACA0F17F76A7F00773D4D /* MemorizeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MemorizeTests.m; sourceTree = "<group>"; };
+		321ACA1917F76AA400773D4D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		322FEDD117F7C2DD007B4AC3 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		322FEDD217F7C2DD007B4AC3 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		322FEDD417F7C4C0007B4AC3 /* ReviewTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTabViewController.h; sourceTree = "<group>"; };
+		322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTabViewController.m; sourceTree = "<group>"; };
+		3255F58B17FC524D00ECFB02 /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
+		3255F58C17FC524D00ECFB02 /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
+		3255F58E17FC54BC00ECFB02 /* ReviewType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewType.h; sourceTree = "<group>"; };
+		3278D6D317F9B98500632B49 /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		3278D6D417F9B98500632B49 /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,9 +132,19 @@
 			children = (
 				321AC9F517F76A7F00773D4D /* AppDelegate.h */,
 				321AC9F617F76A7F00773D4D /* AppDelegate.m */,
+				321ACA1917F76AA400773D4D /* Main.storyboard */,
 				321AC9FB17F76A7F00773D4D /* Images.xcassets */,
 				321AC9F817F76A7F00773D4D /* Memorize.xcdatamodeld */,
 				321AC9ED17F76A7F00773D4D /* Supporting Files */,
+				322FEDD117F7C2DD007B4AC3 /* MasterViewController.h */,
+				322FEDD217F7C2DD007B4AC3 /* MasterViewController.m */,
+				322FEDD417F7C4C0007B4AC3 /* ReviewTabViewController.h */,
+				322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */,
+				3278D6D317F9B98500632B49 /* StatsViewController.h */,
+				3278D6D417F9B98500632B49 /* StatsViewController.m */,
+				3255F58B17FC524D00ECFB02 /* ReviewViewController.h */,
+				3255F58C17FC524D00ECFB02 /* ReviewViewController.m */,
+				3255F58E17FC54BC00ECFB02 /* ReviewType.h */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";
@@ -228,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				321ACA1A17F76AA400773D4D /* Main.storyboard in Resources */,
 				321AC9F117F76A7F00773D4D /* InfoPlist.strings in Resources */,
 				321AC9FC17F76A7F00773D4D /* Images.xcassets in Resources */,
 			);
@@ -248,9 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				322FEDD617F7C4C0007B4AC3 /* ReviewTabViewController.m in Sources */,
+				322FEDD317F7C2DD007B4AC3 /* MasterViewController.m in Sources */,
+				3278D6D517F9B98500632B49 /* StatsViewController.m in Sources */,
 				321AC9FA17F76A7F00773D4D /* Memorize.xcdatamodeld in Sources */,
 				321AC9F717F76A7F00773D4D /* AppDelegate.m in Sources */,
 				321AC9F317F76A7F00773D4D /* main.m in Sources */,
+				3255F58D17FC524D00ECFB02 /* ReviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +483,7 @@
 				321ACA1517F76A7F00773D4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		321ACA1617F76A7F00773D4D /* Build configuration list for PBXNativeTarget "MemorizeTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +492,7 @@
 				321ACA1817F76A7F00773D4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
