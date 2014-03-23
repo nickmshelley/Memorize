@@ -28,7 +28,7 @@
             self.questionLabel.hidden = YES;
             break;
     }
-    self.answerLabel.text = @"This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long. This is really long.";
+    self.answerLabel.text = @"Answer";
 }
 
 - (IBAction)questionPressed:(id)sender {
