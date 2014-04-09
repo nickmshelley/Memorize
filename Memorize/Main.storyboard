@@ -252,8 +252,8 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrT-Rj-OZn">
-                                            <rect key="frame" x="139" y="11" width="37" height="21"/>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrT-Rj-OZn">
+                                            <rect key="frame" x="142" y="11" width="37" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
@@ -266,7 +266,9 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="centerX" secondItem="XrT-Rj-OZn" secondAttribute="centerX" id="8Da-PU-ol6"/>
                                         <constraint firstAttribute="trailing" secondItem="jjd-q9-JNt" secondAttribute="trailing" constant="20" id="DuB-t9-dIb"/>
+                                        <constraint firstAttribute="centerY" secondItem="XrT-Rj-OZn" secondAttribute="centerY" id="TuK-Ab-yvu"/>
                                         <constraint firstItem="XAu-rQ-eWA" firstAttribute="top" secondItem="2yJ-Gd-v8M" secondAttribute="top" constant="11" id="UEQ-64-NSx"/>
                                         <constraint firstAttribute="bottom" secondItem="jjd-q9-JNt" secondAttribute="bottom" constant="11" id="cP4-cD-aDS"/>
                                         <constraint firstItem="jjd-q9-JNt" firstAttribute="top" secondItem="2yJ-Gd-v8M" secondAttribute="top" constant="11" id="mMR-SU-xSc"/>
