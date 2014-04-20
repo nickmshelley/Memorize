@@ -8,10 +8,12 @@
 
 @class ReviewState;
 
-@interface Card : NSObject
+@interface Card : NSObject <NSCoding>
 
+@property (nonatomic, strong) NSString *cardID;
 @property (nonatomic, strong) NSString *question;
 @property (nonatomic, strong) NSString *answer;
+@property (nonatomic, assign) BOOL isReviewing;
 @property (nonatomic, strong) ReviewState *normalReviewState;
 @property (nonatomic, strong) ReviewState *reverseReviewState;
 

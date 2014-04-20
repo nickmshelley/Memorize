@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Mine. All rights reserved.
 //
 
-@interface ReviewState : NSObject
+@interface ReviewState : NSObject <NSCoding>
 
 @property (nonatomic, assign) NSUInteger numSuccesses;
 @property (nonatomic, strong) NSDate *lastSuccess;

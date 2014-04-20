@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UserDataController.h"
 
 @implementation AppDelegate
 
@@ -16,16 +17,14 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    NSError *error = nil;
-    NSData *data = [NSData dataWithContentsOfFile:@"/Users/heather/Downloads/view-stats.json"];
-    NSLog(@"%@", [NSJSONSerialization JSONObjectWithData:data options:0 error:&error]);
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-#pragma mark - Application's Documents directory
-
-- (NSURL *)applicationDocumentsDirectory {
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    BOOL hasDoneInitialImport = [defaults boolForKey:@"initialImportDone"];
+    if (!hasDoneInitialImport) {
+        [[UserDataController sharedController] importInitialData];
+    }
+    
+    [defaults setBool:YES forKey:@"initialImportDone"];
+    [defaults synchronize];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "ReviewTabViewController.h"
+#import "CardViewerViewController.h"
 
 @interface MasterViewController ()
 
@@ -15,23 +16,15 @@
 
 @implementation MasterViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"Normal"]) {
         [[segue destinationViewController] setReviewType:ReviewTypeNormal];
-    } else {
+    } else if ([[segue identifier] isEqualToString:@"Reverse"]) {
         [[segue destinationViewController] setReviewType:ReviewTypeReverse];
+    } else if ([[segue identifier] isEqualToString:@"Reviewing"]) {
+        [[segue destinationViewController] setViewType:ViewTypeReviewing];
+    } else if ([[segue identifier] isEqualToString:@"NotReviewing"]) {
+        [[segue destinationViewController] setViewType:ViewTypeNotReviewing];
     }
 }
 
