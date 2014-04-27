@@ -6,13 +6,10 @@
 //  Copyright (c) 2014 Mine. All rights reserved.
 //
 
-typedef NS_ENUM(NSInteger, ViewType) {
-    ViewTypeReviewing,
-    ViewTypeNotReviewing
-};
+@class Card;
 
-@interface CardViewerViewController : UITableViewController
+@interface CardViewerViewController : UIViewController
 
-@property (nonatomic, assign) ViewType viewType;
+@property (nonatomic, strong) Card *existingCard;
 
 @end

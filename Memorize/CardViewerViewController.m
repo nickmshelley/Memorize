@@ -7,45 +7,71 @@
 //
 
 #import "CardViewerViewController.h"
-#import "UserDataController.h"
 #import "Card.h"
+#import "TextEditorViewController.h"
 
 @interface CardViewerViewController ()
-
-@property (nonatomic, strong) NSArray *nodes;
+@property (weak, nonatomic) IBOutlet UITextView *questionTextView;
+@property (weak, nonatomic) IBOutlet UITextView *answerTextView;
 
 @end
 
 @implementation CardViewerViewController
 
 - (void)viewDidLoad {
-    switch (self.viewType) {
-        case ViewTypeReviewing:
-            self.nodes = [[UserDataController sharedController] reviewingCards];
-            break;
-        case ViewTypeNotReviewing:
-            self.nodes = [[UserDataController sharedController] notReviewingCards];
-            break;
+    UITapGestureRecognizer *questionTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(questionTapped)];
+    [questionTap setNumberOfTapsRequired:1];
+    [self.questionTextView addGestureRecognizer:questionTap];
+    
+    UITapGestureRecognizer *answerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(answerTapped)];
+    [answerTap setNumberOfTapsRequired:1];
+    [self.answerTextView addGestureRecognizer:answerTap];
+    
+    self.questionTextView.text = self.existingCard.question ?: @"Touch to edit question.";
+    self.answerTextView.text = self.existingCard.answer ?: @"Touch to edit answer.";
+}
+
+- (void)questionTapped {
+    [self performSegueWithIdentifier:@"TextEditorSegue" sender:@"question"];
+}
+
+- (void)answerTapped {
+    [self performSegueWithIdentifier:@"TextEditorSegue" sender:@"answer"];
+}
+
+- (void)editQuestion:(NSString *)text {
+    if (!self.existingCard) {
+        self.existingCard = [[Card alloc] init];
     }
+    
+    [self.existingCard updateQuestion:text];
+    self.questionTextView.text = text;
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.nodes.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    Card *card = self.nodes[indexPath.row];
-    cell.textLabel.text = card.question;
-    return cell;
+- (void)editAnswer:(NSString *)text {
+    if (!self.existingCard) {
+        self.existingCard = [[Card alloc] init];
+    }
+    
+    [self.existingCard updateAnswer:text];
+    self.answerTextView.text = text;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+    if ([segue.identifier isEqualToString:@"TextEditorSegue"]) {
+        TextEditorViewController *editor = segue.destinationViewController;
+        if ([sender isEqualToString:@"question"]) {
+            editor.existingText = self.existingCard.question;
+            editor.saveBlock = ^void(NSString *text) {
+                [self editQuestion:text];
+            };
+        } else {
+            editor.existingText = self.existingCard.answer;
+            editor.saveBlock = ^void(NSString *text) {
+                [self editAnswer:text];
+            };
+        }
+    }
 }
 
 @end

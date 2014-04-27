@@ -10,6 +10,8 @@
 #import <YapDatabase/YapDatabase.h>
 #import "Card.h"
 
+NSString *const kCardsCollection = @"Cards";
+
 @interface UserDataController ()
 
 @property (nonatomic, strong) YapDatabase *database;
@@ -37,10 +39,9 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
     [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
         for (NSDictionary *cardDict in existingCards) {
             Card *card = [[Card alloc] init];
-            card.cardID = [[NSUUID UUID] UUIDString];
             card.question = cardDict[@"question"];
             card.answer = cardDict[@"answer"];
-            [transaction setObject:card forKey:card.cardID inCollection:@"Cards"];
+            [transaction setObject:card forKey:card.cardID inCollection:kCardsCollection];
         }
     }];
 }
@@ -48,12 +49,14 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
 - (NSArray *)allCards {
     NSMutableArray *cards = [NSMutableArray array];
     [self.connection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
-        [transaction enumerateKeysAndObjectsInCollection:@"Cards" usingBlock:^(NSString *key, id object, BOOL *stop) {
+        [transaction enumerateKeysAndObjectsInCollection:kCardsCollection usingBlock:^(NSString *key, id object, BOOL *stop) {
             [cards addObject:object];
         }];
     }];
     
-    return cards;
+    return [cards sortedArrayUsingComparator:^NSComparisonResult(Card *card1, Card *card2) {
+        return [card1.question caseInsensitiveCompare:card2.question];
+    }];
 }
 
 - (NSArray *)reviewingCards {
@@ -67,6 +70,12 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
 - (NSString *)databasePath {
     NSURL *URL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
     return [URL.path stringByAppendingPathComponent:@"data"];
+}
+
+- (void)updateCard:(Card *)card {
+    [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
+        [transaction setObject:card forKey:card.cardID inCollection:kCardsCollection];
+    }];
 }
 
 @end

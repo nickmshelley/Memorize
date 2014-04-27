@@ -8,7 +8,7 @@
 
 #import "MasterViewController.h"
 #import "ReviewTabViewController.h"
-#import "CardViewerViewController.h"
+#import "CardViewerTableViewController.h"
 
 @interface MasterViewController ()
 

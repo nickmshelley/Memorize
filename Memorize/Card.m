@@ -7,8 +7,17 @@
 //
 
 #import "Card.h"
+#import "UserDataController.h"
 
 @implementation Card
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.cardID = [[NSUUID UUID] UUIDString];
+    }
+    return self;
+}
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if ((self = [super init])) {
@@ -29,6 +38,21 @@
     [aCoder encodeObject:self.answer forKey:@"answer"];
     [aCoder encodeObject:self.normalReviewState forKey:@"normalReviewState"];
     [aCoder encodeObject:self.reverseReviewState forKey:@"reverseReviewState"];
+}
+
+- (void)updateQuestion:(NSString *)question {
+    self.question = question;
+    [[UserDataController sharedController] updateCard:self];
+}
+
+- (void)updateAnswer:(NSString *)answer {
+    self.answer = answer;
+    [[UserDataController sharedController] updateCard:self];
+}
+
+- (void)updateIsReviewing:(BOOL)isReviewing {
+    self.isReviewing = isReviewing;
+    [[UserDataController sharedController] updateCard:self];
 }
 
 @end

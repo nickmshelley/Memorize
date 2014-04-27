@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Mine. All rights reserved.
 //
 
+@class Card;
+
 #import <CWLSynthesizeSingleton/CWLSynthesizeSingleton.h>
 
 @interface UserDataController : NSObject
@@ -16,5 +18,6 @@ CWL_DECLARE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedControll
 - (NSArray *)allCards;
 - (NSArray *)reviewingCards;
 - (NSArray *)notReviewingCards;
+- (void)updateCard:(Card *)card;
 
 @end

@@ -17,4 +17,8 @@
 @property (nonatomic, strong) ReviewState *normalReviewState;
 @property (nonatomic, strong) ReviewState *reverseReviewState;
 
+- (void)updateQuestion:(NSString *)question;
+- (void)updateAnswer:(NSString *)answer;
+- (void)updateIsReviewing:(BOOL)isReviewing;
+
 @end

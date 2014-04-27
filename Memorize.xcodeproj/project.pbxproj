@@ -31,8 +31,9 @@
 		3280004118F6015D00D80DB4 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280004018F6015D00D80DB4 /* Card.m */; };
 		3280004418F6016F00D80DB4 /* ReviewState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280004318F6016F00D80DB4 /* ReviewState.m */; };
 		3280004618F60C3800D80DB4 /* existingCards.json in Resources */ = {isa = PBXBuildFile; fileRef = 3280004518F60C3800D80DB4 /* existingCards.json */; };
-		32CC01AE190459E700717C85 /* CardEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC01AD190459E700717C85 /* CardEditorViewController.m */; };
-		32CC01B1190459FD00717C85 /* CardViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC01B0190459FD00717C85 /* CardViewerViewController.m */; };
+		32BC7AD3190DA5F000A2407B /* TextEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BC7AD2190DA5EF00A2407B /* TextEditorViewController.m */; };
+		32CC01AE190459E700717C85 /* CardViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC01AD190459E700717C85 /* CardViewerViewController.m */; };
+		32CC01B1190459FD00717C85 /* CardViewerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC01B0190459FD00717C85 /* CardViewerTableViewController.m */; };
 		DCCA0F1A1FF042059C492A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F38FC5277F7D405BBDCF8446 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -82,10 +83,12 @@
 		3280004218F6016F00D80DB4 /* ReviewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewState.h; sourceTree = "<group>"; };
 		3280004318F6016F00D80DB4 /* ReviewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewState.m; sourceTree = "<group>"; };
 		3280004518F60C3800D80DB4 /* existingCards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = existingCards.json; sourceTree = "<group>"; };
-		32CC01AC190459E700717C85 /* CardEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardEditorViewController.h; sourceTree = "<group>"; };
-		32CC01AD190459E700717C85 /* CardEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardEditorViewController.m; sourceTree = "<group>"; };
-		32CC01AF190459FD00717C85 /* CardViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewerViewController.h; sourceTree = "<group>"; };
-		32CC01B0190459FD00717C85 /* CardViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewerViewController.m; sourceTree = "<group>"; };
+		32BC7AD1190DA5EF00A2407B /* TextEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditorViewController.h; sourceTree = "<group>"; };
+		32BC7AD2190DA5EF00A2407B /* TextEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEditorViewController.m; sourceTree = "<group>"; };
+		32CC01AC190459E700717C85 /* CardViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewerViewController.h; sourceTree = "<group>"; };
+		32CC01AD190459E700717C85 /* CardViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewerViewController.m; sourceTree = "<group>"; };
+		32CC01AF190459FD00717C85 /* CardViewerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewerTableViewController.h; sourceTree = "<group>"; };
+		32CC01B0190459FD00717C85 /* CardViewerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewerTableViewController.m; sourceTree = "<group>"; };
 		77A9BF0DAD244A1B97ADA790 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F38FC5277F7D405BBDCF8446 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -169,10 +172,12 @@
 				3255F58B17FC524D00ECFB02 /* ReviewViewController.h */,
 				3255F58C17FC524D00ECFB02 /* ReviewViewController.m */,
 				3255F58E17FC54BC00ECFB02 /* ReviewType.h */,
-				32CC01AC190459E700717C85 /* CardEditorViewController.h */,
-				32CC01AD190459E700717C85 /* CardEditorViewController.m */,
-				32CC01AF190459FD00717C85 /* CardViewerViewController.h */,
-				32CC01B0190459FD00717C85 /* CardViewerViewController.m */,
+				32CC01AC190459E700717C85 /* CardViewerViewController.h */,
+				32CC01AD190459E700717C85 /* CardViewerViewController.m */,
+				32CC01AF190459FD00717C85 /* CardViewerTableViewController.h */,
+				32CC01B0190459FD00717C85 /* CardViewerTableViewController.m */,
+				32BC7AD1190DA5EF00A2407B /* TextEditorViewController.h */,
+				32BC7AD2190DA5EF00A2407B /* TextEditorViewController.m */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";
@@ -352,12 +357,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32CC01B1190459FD00717C85 /* CardViewerViewController.m in Sources */,
+				32CC01B1190459FD00717C85 /* CardViewerTableViewController.m in Sources */,
 				322FEDD617F7C4C0007B4AC3 /* ReviewTabViewController.m in Sources */,
 				3280004418F6016F00D80DB4 /* ReviewState.m in Sources */,
-				32CC01AE190459E700717C85 /* CardEditorViewController.m in Sources */,
+				32CC01AE190459E700717C85 /* CardViewerViewController.m in Sources */,
 				322FEDD317F7C2DD007B4AC3 /* MasterViewController.m in Sources */,
 				3278D6D517F9B98500632B49 /* StatsViewController.m in Sources */,
+				32BC7AD3190DA5F000A2407B /* TextEditorViewController.m in Sources */,
 				321AC9FA17F76A7F00773D4D /* Memorize.xcdatamodeld in Sources */,
 				3280003E18F6011000D80DB4 /* UserDataController.m in Sources */,
 				3280004118F6015D00D80DB4 /* Card.m in Sources */,
