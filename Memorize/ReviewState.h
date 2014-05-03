@@ -12,4 +12,6 @@
 @property (nonatomic, strong) NSDate *lastSuccess;
 @property (nonatomic, strong) NSDate *nextReviewDate;
 
+- (BOOL)needsReview;
+
 @end

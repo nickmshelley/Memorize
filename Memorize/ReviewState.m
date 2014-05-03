@@ -25,4 +25,8 @@
     [aCoder encodeObject:self.nextReviewDate forKey:@"nextReviewDate"];
 }
 
+- (BOOL)needsReview {
+    return ([self.nextReviewDate compare:[NSDate date]] != NSOrderedDescending);
+}
+
 @end
