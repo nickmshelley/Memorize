@@ -8,6 +8,8 @@
 
 #import "Card.h"
 #import "UserDataController.h"
+#import "ReviewState.h"
+#import "NSDate+Helpers.h"
 
 @implementation Card
 
@@ -52,6 +54,12 @@
 
 - (void)updateIsReviewing:(BOOL)isReviewing {
     self.isReviewing = isReviewing;
+    if (isReviewing) {
+        self.normalReviewState = [[ReviewState alloc] init];
+        self.normalReviewState.nextReviewDate = [NSDate threeAMToday];
+        self.reverseReviewState = [[ReviewState alloc] init];
+        self.reverseReviewState.nextReviewDate = [NSDate threeAMToday];
+    }
     [[UserDataController sharedController] updateCard:self];
 }
 

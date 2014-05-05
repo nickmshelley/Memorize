@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321A5D9C1915504500D7D440 /* NSDate+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 321A5D9B1915504500D7D440 /* NSDate+Helpers.m */; };
 		321AC9E517F76A7F00773D4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321AC9E417F76A7F00773D4D /* Foundation.framework */; };
 		321AC9E717F76A7F00773D4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321AC9E617F76A7F00773D4D /* CoreGraphics.framework */; };
 		321AC9E917F76A7F00773D4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321AC9E817F76A7F00773D4D /* UIKit.framework */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		321A5D9A1915504500D7D440 /* NSDate+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helpers.h"; sourceTree = "<group>"; };
+		321A5D9B1915504500D7D440 /* NSDate+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helpers.m"; sourceTree = "<group>"; };
 		321AC9E117F76A7F00773D4D /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		321AC9E417F76A7F00773D4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		321AC9E617F76A7F00773D4D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -183,6 +186,8 @@
 				32BC7AD2190DA5EF00A2407B /* TextEditorViewController.m */,
 				32BC7AD4190DB92500A2407B /* ThreeColumnTableViewCell.h */,
 				32BC7AD5190DB92500A2407B /* ThreeColumnTableViewCell.m */,
+				321A5D9A1915504500D7D440 /* NSDate+Helpers.h */,
+				321A5D9B1915504500D7D440 /* NSDate+Helpers.m */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				322FEDD617F7C4C0007B4AC3 /* ReviewTabViewController.m in Sources */,
 				3280004418F6016F00D80DB4 /* ReviewState.m in Sources */,
 				32CC01AE190459E700717C85 /* CardViewerViewController.m in Sources */,
+				321A5D9C1915504500D7D440 /* NSDate+Helpers.m in Sources */,
 				322FEDD317F7C2DD007B4AC3 /* MasterViewController.m in Sources */,
 				3278D6D517F9B98500632B49 /* StatsViewController.m in Sources */,
 				32BC7AD3190DA5F000A2407B /* TextEditorViewController.m in Sources */,
