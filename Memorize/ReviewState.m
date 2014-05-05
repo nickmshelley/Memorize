@@ -7,6 +7,7 @@
 //
 
 #import "ReviewState.h"
+#import "NSDate+Helpers.h"
 
 @implementation ReviewState
 
@@ -27,6 +28,26 @@
 
 - (BOOL)needsReview {
     return ([self.nextReviewDate compare:[NSDate date]] != NSOrderedDescending);
+}
+
+- (void)updateCorrect {
+    self.numSuccesses = self.numSuccesses + 1;
+    self.lastSuccess = [NSDate date];
+    
+    NSDateComponents *dayComponent = [[NSDateComponents alloc] init];
+    NSInteger daysToAdd = [self dayDifference];
+    dayComponent.day = daysToAdd;
+    NSCalendar *theCalendar = [NSCalendar currentCalendar];
+    self.nextReviewDate = [theCalendar dateByAddingComponents:dayComponent toDate:[NSDate threeAMToday] options:0];
+}
+
+- (void)updateMissed {
+    self.numSuccesses = 0;
+    self.nextReviewDate = [NSDate threeAMToday];
+}
+
+- (NSInteger)dayDifference {
+    return (int)pow(1.5, self.numSuccesses);
 }
 
 @end

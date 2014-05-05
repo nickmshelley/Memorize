@@ -422,6 +422,7 @@
                     <tabBarItem key="tabBarItem" title="Review" id="A4x-qd-ofa"/>
                     <connections>
                         <outlet property="answerTextView" destination="dq0-Mh-ByN" id="piS-3Z-TQH"/>
+                        <outlet property="editButton" destination="3nh-lx-36o" id="3yQ-uB-EST"/>
                         <outlet property="questionLabel" destination="UXb-Gb-XYX" id="GKx-hy-jLp"/>
                         <outlet property="remainingLabel" destination="g0N-zA-4fO" id="R6f-9i-y0b"/>
                     </connections>

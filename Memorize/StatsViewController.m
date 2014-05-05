@@ -15,7 +15,9 @@
 @interface StatsViewController ()
 
 @property (nonatomic, strong) NSDictionary *reviewLevel;
+@property (nonatomic, strong) NSArray *reviewLevelOrderedKeys;
 @property (nonatomic, strong) NSDictionary *reviewDay;
+@property (nonatomic, strong) NSArray *reviewDayOrderedKeys;
 @property (nonatomic, assign) NSInteger readyCards;
 
 @end
@@ -24,6 +26,11 @@
 
 - (void)viewDidLoad {
     [self processCards];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self processCards];
+    [self.tableView reloadData];
 }
 
 - (void)processCards {
@@ -47,7 +54,7 @@
         }
         levelDict[@"total"] = @([levelDict[@"total"] integerValue] + 1);
         
-        NSMutableDictionary *dayDict = reviewDay[@(reviewState.numSuccesses)];
+        NSMutableDictionary *dayDict = reviewDay[@([reviewState dayDifference])];
         if (!dayDict) {
             dayDict = [@{@"total": @(0), @"needsReview": @(0)} mutableCopy];
         }
@@ -60,11 +67,13 @@
         }
         
         reviewLevel[@(reviewState.numSuccesses)] = levelDict;
-        reviewLevel[@(reviewState.numSuccesses)] = dayDict;
+        reviewDay[@([reviewState dayDifference])] = dayDict;
     }
     
     self.reviewLevel = reviewLevel;
+    self.reviewLevelOrderedKeys = [self.reviewLevel.allKeys sortedArrayUsingSelector:@selector(compare:)];
     self.reviewDay = reviewDay;
+    self.reviewDayOrderedKeys = [self.reviewDay.allKeys sortedArrayUsingSelector:@selector(compare:)];
     self.readyCards = readyCards;
 }
 
@@ -80,10 +89,10 @@
             return 1;
             break;
         case 1:
-            return [[self.reviewLevel.allKeys valueForKeyPath:@"@max.self"] intValue];
+            return self.reviewLevel.count + 1;
             break;
         case 2:
-            return [[self.reviewDay.allKeys valueForKeyPath:@"@max.self"] intValue];;
+            return self.reviewDay.count + 1;
             break;
         default:
             return 0;
@@ -106,13 +115,14 @@
                 cell.middleLabel.text = @"Total";
                 cell.rightLabel.text = @"Needs Review";
             } else {
-                NSNumber *reviewLevel = @(indexPath.row - 1);
+                NSNumber *reviewLevel = self.reviewLevelOrderedKeys[indexPath.row - 1];
                 NSNumber *total = self.reviewLevel[reviewLevel][@"total"] ?: @(0);
                 NSNumber *needsReview = self.reviewLevel[reviewLevel][@"needsReview"] ?: @(0);
                 cell.leftLabel.text = [NSString stringWithFormat:@"%@", reviewLevel];
                 cell.middleLabel.text = [NSString stringWithFormat:@"%@", total];
                 cell.rightLabel.text = [NSString stringWithFormat:@"%@", needsReview];
             }
+            break;
         }
         case 2: {
             if (indexPath.row == 0) {
@@ -120,13 +130,14 @@
                 cell.middleLabel.text = @"Total";
                 cell.rightLabel.text = @"Needs Review";
             } else {
-                NSNumber *dayDifference = @(indexPath.row);
+                NSNumber *dayDifference = self.reviewDayOrderedKeys[indexPath.row - 1];
                 NSNumber *total = self.reviewDay[dayDifference][@"total"] ?: @(0);
                 NSNumber *needsReview = self.reviewDay[dayDifference][@"needsReview"] ?: @(0);
                 cell.leftLabel.text = [NSString stringWithFormat:@"%@", dayDifference];
                 cell.middleLabel.text = [NSString stringWithFormat:@"%@", total];
                 cell.rightLabel.text = [NSString stringWithFormat:@"%@", needsReview];
             }
+            break;
         }
     }
     

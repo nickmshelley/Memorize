@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Mine. All rights reserved.
 //
 
+#import "ReviewType.h"
+
 @class ReviewState;
 
 @interface Card : NSObject <NSCoding>
@@ -20,5 +22,7 @@
 - (void)updateQuestion:(NSString *)question;
 - (void)updateAnswer:(NSString *)answer;
 - (void)updateIsReviewing:(BOOL)isReviewing;
+- (void)updateCorrectForReviewType:(ReviewType)reviewType;
+- (void)updateMissedForReviewType:(ReviewType)reviewType;
 
 @end

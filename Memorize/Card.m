@@ -63,4 +63,28 @@
     [[UserDataController sharedController] updateCard:self];
 }
 
+- (void)updateCorrectForReviewType:(ReviewType)reviewType {
+    switch (reviewType) {
+        case ReviewTypeNormal:
+            [self.normalReviewState updateCorrect];
+            break;
+        case ReviewTypeReverse:
+            [self.reverseReviewState updateCorrect];
+            break;
+    }
+    [[UserDataController sharedController] updateCard:self];
+}
+
+- (void)updateMissedForReviewType:(ReviewType)reviewType {
+    switch (reviewType) {
+        case ReviewTypeNormal:
+            [self.normalReviewState updateMissed];
+            break;
+        case ReviewTypeReverse:
+            [self.reverseReviewState updateMissed];
+            break;
+    }
+    [[UserDataController sharedController] updateCard:self];
+}
+
 @end

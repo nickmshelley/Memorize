@@ -13,5 +13,8 @@
 @property (nonatomic, strong) NSDate *nextReviewDate;
 
 - (BOOL)needsReview;
+- (void)updateCorrect;
+- (void)updateMissed;
+- (NSInteger)dayDifference;
 
 @end
