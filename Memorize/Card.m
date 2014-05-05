@@ -67,9 +67,11 @@
     switch (reviewType) {
         case ReviewTypeNormal:
             [self.normalReviewState updateCorrect];
+            [[UserDataController sharedController] incrementNormalCardsReviewedToday];
             break;
         case ReviewTypeReverse:
             [self.reverseReviewState updateCorrect];
+            [[UserDataController sharedController] incrementReverseCardsReviewedToday];
             break;
     }
     [[UserDataController sharedController] updateCard:self];
