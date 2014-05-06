@@ -421,8 +421,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Review" id="A4x-qd-ofa"/>
                     <connections>
+                        <outlet property="answerButton" destination="X4F-Tj-p66" id="kdE-7O-YQr"/>
                         <outlet property="answerTextView" destination="dq0-Mh-ByN" id="piS-3Z-TQH"/>
+                        <outlet property="correctButton" destination="5qB-10-E9f" id="RNc-SH-C3h"/>
                         <outlet property="editButton" destination="3nh-lx-36o" id="3yQ-uB-EST"/>
+                        <outlet property="missedButton" destination="Jmc-Co-JY0" id="gCw-Qx-FvA"/>
+                        <outlet property="questionButton" destination="bEk-lJ-yOX" id="dlA-3C-HSY"/>
                         <outlet property="questionLabel" destination="UXb-Gb-XYX" id="GKx-hy-jLp"/>
                         <outlet property="remainingLabel" destination="g0N-zA-4fO" id="R6f-9i-y0b"/>
                     </connections>
@@ -541,8 +545,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wnQ-4d-ApA"/>
         <segue reference="5Wz-St-ifE"/>
+        <segue reference="wnQ-4d-ApA"/>
         <segue reference="TnY-Bq-awQ"/>
     </inferredMetricsTieBreakers>
 </document>
