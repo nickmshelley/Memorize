@@ -349,7 +349,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qB-10-E9f">
-                                <rect key="frame" x="20" y="317" width="52" height="30"/>
+                                <rect key="frame" x="248" y="317" width="52" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Correct">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -370,7 +370,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmc-Co-JY0">
-                                <rect key="frame" x="250" y="317" width="50" height="30"/>
+                                <rect key="frame" x="20" y="317" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Missed">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -379,7 +379,7 @@
                                     <action selector="missedPressed:" destination="iM4-kg-OIa" eventType="touchUpInside" id="QFm-mc-eDV"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq0-Mh-ByN">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dq0-Mh-ByN">
                                 <rect key="frame" x="20" y="160" width="280" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -401,7 +401,6 @@
                             <constraint firstAttribute="trailing" secondItem="UXb-Gb-XYX" secondAttribute="trailing" constant="20" id="0aB-sv-wIp"/>
                             <constraint firstItem="bEk-lJ-yOX" firstAttribute="leading" secondItem="UXb-Gb-XYX" secondAttribute="leading" id="6ez-Ui-uwS"/>
                             <constraint firstAttribute="trailing" secondItem="g0N-zA-4fO" secondAttribute="trailing" constant="20" id="76L-Z5-GlK"/>
-                            <constraint firstAttribute="trailing" secondItem="Jmc-Co-JY0" secondAttribute="trailing" constant="20" id="98u-h9-CiT"/>
                             <constraint firstItem="FJH-lD-1wI" firstAttribute="top" secondItem="3nh-lx-36o" secondAttribute="bottom" constant="20" id="ECh-J9-cgn"/>
                             <constraint firstAttribute="centerX" secondItem="3nh-lx-36o" secondAttribute="centerX" id="FFo-rW-DWS"/>
                             <constraint firstItem="dq0-Mh-ByN" firstAttribute="leading" secondItem="Kqz-ij-zNi" secondAttribute="leading" constant="20" id="GUk-Ue-aqh"/>
@@ -411,12 +410,13 @@
                             <constraint firstItem="UXb-Gb-XYX" firstAttribute="top" secondItem="bEk-lJ-yOX" secondAttribute="bottom" constant="8" id="bqI-Sq-dGr"/>
                             <constraint firstAttribute="trailing" secondItem="dq0-Mh-ByN" secondAttribute="trailing" constant="20" id="doT-4l-0sH"/>
                             <constraint firstItem="bEk-lJ-yOX" firstAttribute="leading" secondItem="Kqz-ij-zNi" secondAttribute="leading" constant="20" id="f2H-zZ-Tlp"/>
+                            <constraint firstAttribute="trailing" secondItem="5qB-10-E9f" secondAttribute="trailing" constant="20" id="gh5-C6-hYR"/>
                             <constraint firstItem="FJH-lD-1wI" firstAttribute="top" secondItem="Jmc-Co-JY0" secondAttribute="bottom" constant="20" id="iXy-oH-RSh"/>
                             <constraint firstItem="dq0-Mh-ByN" firstAttribute="top" secondItem="X4F-Tj-p66" secondAttribute="bottom" constant="10" id="kXV-0W-vOj"/>
-                            <constraint firstItem="5qB-10-E9f" firstAttribute="leading" secondItem="Kqz-ij-zNi" secondAttribute="leading" constant="20" id="neH-SI-hka"/>
                             <constraint firstItem="g0N-zA-4fO" firstAttribute="leading" secondItem="Kqz-ij-zNi" secondAttribute="leading" constant="20" id="oTV-bz-nPB"/>
                             <constraint firstItem="FJH-lD-1wI" firstAttribute="top" secondItem="5qB-10-E9f" secondAttribute="bottom" constant="20" id="p0j-nq-93D"/>
                             <constraint firstItem="X4F-Tj-p66" firstAttribute="top" secondItem="UXb-Gb-XYX" secondAttribute="bottom" constant="20" id="rw7-y2-ZFp"/>
+                            <constraint firstItem="Jmc-Co-JY0" firstAttribute="leading" secondItem="Kqz-ij-zNi" secondAttribute="leading" constant="20" id="wfU-ou-vz4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Review" id="A4x-qd-ofa"/>
