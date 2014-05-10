@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSDictionary *reviewDay;
 @property (nonatomic, strong) NSArray *reviewDayOrderedKeys;
 @property (nonatomic, assign) NSInteger readyCards;
+@property (nonatomic, assign) NSInteger totalCards;
 
 @end
 
@@ -36,8 +37,9 @@
 - (void)processCards {
     NSMutableDictionary *reviewLevel = [NSMutableDictionary dictionary];
     NSMutableDictionary *reviewDay = [NSMutableDictionary dictionary];
+    NSArray *reviewingCards = [[UserDataController sharedController] reviewingCards];
     NSInteger readyCards = 0;
-    for (Card *card in [[UserDataController sharedController] reviewingCards]) {
+    for (Card *card in reviewingCards) {
         ReviewState *reviewState = nil;
         switch (self.reviewType) {
             case ReviewTypeNormal:
@@ -75,6 +77,7 @@
     self.reviewDay = reviewDay;
     self.reviewDayOrderedKeys = [self.reviewDay.allKeys sortedArrayUsingSelector:@selector(compare:)];
     self.readyCards = readyCards;
+    self.totalCards = reviewingCards.count;
 }
 
 #pragma mark - Table view data source
@@ -86,7 +89,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case 0:
-            return 1;
+            return 2;
             break;
         case 1:
             return self.reviewLevel.count + 1;
@@ -104,9 +107,16 @@
     ThreeColumnTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     switch (indexPath.section) {
         case 0: {
-            cell.leftLabel.text = @"Cards Ready to Review:";
-            cell.middleLabel.text = @"";
-            cell.rightLabel.text = [NSString stringWithFormat:@"%@", @(self.readyCards)];
+            if (indexPath.row == 0) {
+                cell.leftLabel.text = @"Total Cards:";
+                cell.middleLabel.text = @"";
+                cell.rightLabel.text = [NSString stringWithFormat:@"%@", @(self.totalCards)];
+            } else {
+                cell.leftLabel.text = @"Cards Ready to Review:";
+                cell.middleLabel.text = @"";
+                cell.rightLabel.text = [NSString stringWithFormat:@"%@", @(self.readyCards)];
+            }
+            
             break;
         }
         case 1: {
