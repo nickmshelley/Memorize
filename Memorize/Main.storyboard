@@ -365,7 +365,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="correctPressed:" destination="iM4-kg-OIa" eventType="touchUpInside" id="zhS-Zw-goT"/>
                                     <segue destination="htI-1T-25c" kind="push" identifier="EditCardFromReview" id="TnY-Bq-awQ"/>
                                 </connections>
                             </button>

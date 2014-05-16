@@ -11,6 +11,7 @@
 #import "NSDate+Helpers.h"
 #import "Card.h"
 #import "UserDataController.h"
+#import "CardViewerViewController.h"
 
 @interface ReviewViewController ()
 
@@ -41,6 +42,9 @@
     }
     
     [self updateCurrentCard];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
     [self updateUI];
 }
 
@@ -57,7 +61,7 @@
             self.answerTextView.text = [[self.currentCard.answer componentsSeparatedByCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]] componentsJoinedByString:@" "];
             break;
     }
-    self.remainingLabel.text = [NSString stringWithFormat:@"Remaining: %d", self.cards.count];
+    self.remainingLabel.text = [NSString stringWithFormat:@"Remaining: %@", @(self.cards.count)];
     self.questionLabel.text = self.currentCard.question;
     self.editButton.enabled = self.currentCard ? YES : NO;
     self.correctButton.enabled = NO;
@@ -85,6 +89,12 @@
 - (IBAction)missedPressed:(id)sender {
     [self.currentCard updateMissedForReviewType:self.reviewType];
     [self updateCurrentCard];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[CardViewerViewController class]]) {
+        [segue.destinationViewController setExistingCard:self.currentCard];
+    }
 }
 
 - (void)updateCurrentCard {
