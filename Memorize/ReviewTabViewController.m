@@ -34,12 +34,12 @@
         case ReviewTypeNormal:
             self.navigationItem.title = @"Review";
             [(ReviewViewController *)self.viewControllers[0] setReviewType:ReviewTypeNormal];
-            [(StatsViewController *)self.viewControllers[0] setReviewType:ReviewTypeNormal];
+            [(StatsViewController *)self.viewControllers[1] setReviewType:ReviewTypeNormal];
             break;
         case ReviewTypeReverse:
             self.navigationItem.title = @"Review Reverse";
             [(ReviewViewController *)self.viewControllers[0] setReviewType:ReviewTypeReverse];
-            [(StatsViewController *)self.viewControllers[0] setReviewType:ReviewTypeReverse];
+            [(StatsViewController *)self.viewControllers[1] setReviewType:ReviewTypeReverse];
             break;
     }
 }
