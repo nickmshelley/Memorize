@@ -36,6 +36,7 @@
 		32BC7AD6190DB92500A2407B /* ThreeColumnTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BC7AD5190DB92500A2407B /* ThreeColumnTableViewCell.m */; };
 		32CC01AE190459E700717C85 /* CardViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC01AD190459E700717C85 /* CardViewerViewController.m */; };
 		32CC01B1190459FD00717C85 /* CardViewerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC01B0190459FD00717C85 /* CardViewerTableViewController.m */; };
+		32EDC4E019296A170053349E /* UndoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EDC4DF19296A170053349E /* UndoObject.m */; };
 		DCCA0F1A1FF042059C492A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F38FC5277F7D405BBDCF8446 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,8 @@
 		32CC01AD190459E700717C85 /* CardViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewerViewController.m; sourceTree = "<group>"; };
 		32CC01AF190459FD00717C85 /* CardViewerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewerTableViewController.h; sourceTree = "<group>"; };
 		32CC01B0190459FD00717C85 /* CardViewerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewerTableViewController.m; sourceTree = "<group>"; };
+		32EDC4DE19296A170053349E /* UndoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UndoObject.h; sourceTree = "<group>"; };
+		32EDC4DF19296A170053349E /* UndoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UndoObject.m; sourceTree = "<group>"; };
 		77A9BF0DAD244A1B97ADA790 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F38FC5277F7D405BBDCF8446 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -188,6 +191,8 @@
 				32BC7AD5190DB92500A2407B /* ThreeColumnTableViewCell.m */,
 				321A5D9A1915504500D7D440 /* NSDate+Helpers.h */,
 				321A5D9B1915504500D7D440 /* NSDate+Helpers.m */,
+				32EDC4DE19296A170053349E /* UndoObject.h */,
+				32EDC4DF19296A170053349E /* UndoObject.m */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				322FEDD617F7C4C0007B4AC3 /* ReviewTabViewController.m in Sources */,
 				3280004418F6016F00D80DB4 /* ReviewState.m in Sources */,
 				32CC01AE190459E700717C85 /* CardViewerViewController.m in Sources */,
+				32EDC4E019296A170053349E /* UndoObject.m in Sources */,
 				321A5D9C1915504500D7D440 /* NSDate+Helpers.m in Sources */,
 				322FEDD317F7C2DD007B4AC3 /* MasterViewController.m in Sources */,
 				3278D6D517F9B98500632B49 /* StatsViewController.m in Sources */,

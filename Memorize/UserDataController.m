@@ -190,13 +190,6 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
     return cardsReviewed;
 }
 
-- (void)incrementNormalCardsReviewedToday {
-    NSInteger currentNumber = [self normalCardsReviewedToday];
-    [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
-        [transaction setObject:@(currentNumber + 1) forKey:@"numberOfNormalCardsReviewedToday" inCollection:nil];
-    }];
-}
-
 - (NSInteger)reverseCardsReviewedToday {
     __block NSInteger cardsReviewed = 0;
     [self.connection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
@@ -206,10 +199,31 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
     return cardsReviewed;
 }
 
+- (void)incrementNormalCardsReviewedToday {
+    NSInteger currentNumber = [self normalCardsReviewedToday];
+    [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
+        [transaction setObject:@(currentNumber + 1) forKey:@"numberOfNormalCardsReviewedToday" inCollection:nil];
+    }];
+}
+
 - (void)incrementReverseCardsReviewedToday {
     NSInteger currentNumber = [self reverseCardsReviewedToday];
     [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
         [transaction setObject:@(currentNumber + 1) forKey:@"numberOfReverseCardsReviewedToday" inCollection:nil];
+    }];
+}
+
+- (void)decrementNormalCardsReviewedToday {
+    NSInteger currentNumber = [self normalCardsReviewedToday];
+    [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
+        [transaction setObject:@(currentNumber - 1) forKey:@"numberOfNormalCardsReviewedToday" inCollection:nil];
+    }];
+}
+
+- (void)decrementReverseCardsReviewedToday {
+    NSInteger currentNumber = [self reverseCardsReviewedToday];
+    [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
+        [transaction setObject:@(currentNumber - 1) forKey:@"numberOfReverseCardsReviewedToday" inCollection:nil];
     }];
 }
 

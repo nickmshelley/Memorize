@@ -12,6 +12,7 @@
 #import "Card.h"
 #import "UserDataController.h"
 #import "CardViewerViewController.h"
+#import "UndoObject.h"
 
 @interface ReviewViewController ()
 
@@ -21,10 +22,12 @@
 @property (strong, nonatomic) IBOutlet UIButton *answerButton;
 @property (weak, nonatomic) IBOutlet UILabel *remainingLabel;
 @property (strong, nonatomic) IBOutlet UIButton *correctButton;
-@property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property (weak, nonatomic) IBOutlet UIButton *undoButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 @property (strong, nonatomic) IBOutlet UIButton *missedButton;
 @property (nonatomic, strong) NSMutableArray *cards;
 @property (nonatomic, strong) Card *currentCard;
+@property (nonatomic, strong) NSMutableArray *undoStack;
 
 @end
 
@@ -32,6 +35,7 @@
 
 
 - (void)viewDidLoad {
+    self.undoStack = [NSMutableArray array];
     switch (self.reviewType) {
         case ReviewTypeNormal:
             self.cards = [[[UserDataController sharedController] todaysNormalReviewCards] mutableCopy];
@@ -49,23 +53,27 @@
 }
 
 - (void)updateUI {
+    BOOL hasCurrentCard = self.currentCard ? YES : NO;
     switch (self.reviewType) {
         case ReviewTypeNormal:
             self.questionButton.enabled = NO;
+            self.answerButton.enabled = hasCurrentCard;
             self.answerTextView.hidden = YES;
             self.answerTextView.text = self.currentCard.answer;
             break;
         case ReviewTypeReverse:
             self.answerButton.enabled = NO;
+            self.questionButton.enabled = hasCurrentCard;
             self.questionLabel.hidden = YES;
             self.answerTextView.text = [[self.currentCard.answer componentsSeparatedByCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]] componentsJoinedByString:@" "];
             break;
     }
     self.remainingLabel.text = [NSString stringWithFormat:@"Remaining: %@", @(self.cards.count)];
     self.questionLabel.text = self.currentCard.question;
-    self.editButton.enabled = self.currentCard ? YES : NO;
+    self.editButton.enabled = hasCurrentCard;
     self.correctButton.enabled = NO;
     self.missedButton.enabled = NO;
+    self.undoButton.enabled = (self.undoStack.count > 0);
 }
 
 - (IBAction)questionPressed:(id)sender {
@@ -81,14 +89,54 @@
 }
 
 - (IBAction)correctPressed:(id)sender {
+    UndoObject *undo = [[UndoObject alloc] init];
+    undo.card = [self.currentCard copy];
+    undo.correct = YES;
+    [self.undoStack addObject:undo];
     [self.currentCard updateCorrectForReviewType:self.reviewType];
     [self.cards removeObject:self.currentCard];
     [self updateCurrentCard];
 }
 
 - (IBAction)missedPressed:(id)sender {
+    UndoObject *undo = [[UndoObject alloc] init];
+    undo.card = [self.currentCard copy];
+    undo.correct = NO;
+    [self.undoStack addObject:undo];
     [self.currentCard updateMissedForReviewType:self.reviewType];
     [self updateCurrentCard];
+}
+
+- (IBAction)undoPressed {
+    if (self.undoStack.count > 0) {
+        UndoObject *undo = self.undoStack.lastObject;
+        [self.undoStack removeObject:undo];
+        Card *card = undo.card;
+        [card synchronize];
+        [self removeCardWithCardID:card.cardID];
+        [self.cards addObject:card];
+        self.currentCard = card;
+        if (undo.correct) {
+            switch (self.reviewType) {
+                case ReviewTypeNormal:
+                    [[UserDataController sharedController] decrementNormalCardsReviewedToday];
+                    break;
+                case ReviewTypeReverse:
+                    [[UserDataController sharedController] decrementReverseCardsReviewedToday];
+                    break;
+            }
+        }
+        [self updateUI];
+    }
+}
+
+- (void)removeCardWithCardID:(NSString *)cardID {
+    for (Card *card in self.cards) {
+        if ([card.cardID isEqualToString:cardID]) {
+            [self.cards removeObject:card];
+            break;
+        }
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

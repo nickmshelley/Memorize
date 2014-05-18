@@ -10,7 +10,7 @@
 
 @class ReviewState;
 
-@interface Card : NSObject <NSCoding>
+@interface Card : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, strong) NSString *cardID;
 @property (nonatomic, strong) NSString *question;
@@ -24,5 +24,6 @@
 - (void)updateIsReviewing:(BOOL)isReviewing;
 - (void)updateCorrectForReviewType:(ReviewType)reviewType;
 - (void)updateMissedForReviewType:(ReviewType)reviewType;
+- (void)synchronize;
 
 @end

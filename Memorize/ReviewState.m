@@ -50,4 +50,12 @@
     return (int)pow(1.5, self.numSuccesses);
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    ReviewState *reviewState = [[ReviewState alloc] init];
+    reviewState.numSuccesses = self.numSuccesses;
+    reviewState.lastSuccess = [self.lastSuccess copy];
+    reviewState.nextReviewDate = [self.nextReviewDate copy];
+    return reviewState;
+}
+
 @end

@@ -44,12 +44,12 @@
 
 - (void)updateQuestion:(NSString *)question {
     self.question = question;
-    [[UserDataController sharedController] updateCard:self];
+    [self synchronize];
 }
 
 - (void)updateAnswer:(NSString *)answer {
     self.answer = answer;
-    [[UserDataController sharedController] updateCard:self];
+    [self synchronize];
 }
 
 - (void)updateIsReviewing:(BOOL)isReviewing {
@@ -60,7 +60,7 @@
         self.reverseReviewState = [[ReviewState alloc] init];
         self.reverseReviewState.nextReviewDate = [NSDate threeAMToday];
     }
-    [[UserDataController sharedController] updateCard:self];
+    [self synchronize];
 }
 
 - (void)updateCorrectForReviewType:(ReviewType)reviewType {
@@ -74,7 +74,7 @@
             [[UserDataController sharedController] incrementReverseCardsReviewedToday];
             break;
     }
-    [[UserDataController sharedController] updateCard:self];
+    [self synchronize];
 }
 
 - (void)updateMissedForReviewType:(ReviewType)reviewType {
@@ -86,6 +86,21 @@
             [self.reverseReviewState updateMissed];
             break;
     }
+    [self synchronize];
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    Card *card = [[Card alloc] init];
+    card.cardID = [self.cardID copy];
+    card.question = [self.question copy];
+    card.answer = [self.answer copy];
+    card.isReviewing = self.isReviewing;
+    card.normalReviewState = [self.normalReviewState copy];
+    card.reverseReviewState = [self.reverseReviewState copy];
+    return card;
+}
+
+- (void)synchronize {
     [[UserDataController sharedController] updateCard:self];
 }
 
