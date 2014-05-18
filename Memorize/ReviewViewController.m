@@ -20,7 +20,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *questionButton;
 @property (weak, nonatomic) IBOutlet UITextView *answerTextView;
 @property (strong, nonatomic) IBOutlet UIButton *answerButton;
-@property (weak, nonatomic) IBOutlet UILabel *remainingLabel;
 @property (strong, nonatomic) IBOutlet UIButton *correctButton;
 @property (weak, nonatomic) IBOutlet UIButton *undoButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
@@ -56,19 +55,20 @@
     BOOL hasCurrentCard = self.currentCard ? YES : NO;
     switch (self.reviewType) {
         case ReviewTypeNormal:
+            self.title = [NSString stringWithFormat:@"Review (%@)", @(self.cards.count)];
             self.questionButton.enabled = NO;
             self.answerButton.enabled = hasCurrentCard;
             self.answerTextView.hidden = YES;
             self.answerTextView.text = self.currentCard.answer;
             break;
         case ReviewTypeReverse:
+            self.title = [NSString stringWithFormat:@"Review Reverse (%@)", @(self.cards.count)];
             self.answerButton.enabled = NO;
             self.questionButton.enabled = hasCurrentCard;
             self.questionLabel.hidden = YES;
             self.answerTextView.text = [[self.currentCard.answer componentsSeparatedByCharactersInSet:[NSCharacterSet decimalDigitCharacterSet]] componentsJoinedByString:@" "];
             break;
     }
-    self.remainingLabel.text = [NSString stringWithFormat:@"Remaining: %@", @(self.cards.count)];
     self.questionLabel.text = self.currentCard.question;
     self.editButton.enabled = hasCurrentCard;
     self.correctButton.enabled = NO;
