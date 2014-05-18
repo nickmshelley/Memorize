@@ -17,9 +17,9 @@
 @implementation MasterViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"Normal"]) {
+    if ([[segue identifier] rangeOfString:@"Normal"].location != NSNotFound) {
         [[segue destinationViewController] setReviewType:ReviewTypeNormal];
-    } else if ([[segue identifier] isEqualToString:@"Reverse"]) {
+    } else if ([[segue identifier] rangeOfString:@"Reverse"].location != NSNotFound) {
         [[segue destinationViewController] setReviewType:ReviewTypeReverse];
     } else if ([[segue identifier] isEqualToString:@"Reviewing"]) {
         [[segue destinationViewController] setViewType:ViewTypeReviewing];
