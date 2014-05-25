@@ -17,14 +17,16 @@
 @implementation MasterViewController
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] rangeOfString:@"Normal"].location != NSNotFound) {
-        [[segue destinationViewController] setReviewType:ReviewTypeNormal];
-    } else if ([[segue identifier] rangeOfString:@"Reverse"].location != NSNotFound) {
-        [[segue destinationViewController] setReviewType:ReviewTypeReverse];
-    } else if ([[segue identifier] isEqualToString:@"Reviewing"]) {
-        [[segue destinationViewController] setViewType:ViewTypeReviewing];
-    } else if ([[segue identifier] isEqualToString:@"NotReviewing"]) {
-        [[segue destinationViewController] setViewType:ViewTypeNotReviewing];
+    if (segue.identifier) {
+        if ([[segue identifier] rangeOfString:@"Normal"].location != NSNotFound) {
+            [[segue destinationViewController] setReviewType:ReviewTypeNormal];
+        } else if ([[segue identifier] rangeOfString:@"Reverse"].location != NSNotFound) {
+            [[segue destinationViewController] setReviewType:ReviewTypeReverse];
+        } else if ([[segue identifier] isEqualToString:@"Reviewing"]) {
+            [[segue destinationViewController] setViewType:ViewTypeReviewing];
+        } else if ([[segue identifier] isEqualToString:@"NotReviewing"]) {
+            [[segue destinationViewController] setViewType:ViewTypeNotReviewing];
+        }
     }
 }
 
