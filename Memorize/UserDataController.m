@@ -13,6 +13,10 @@
 #import "NSDate+Helpers.h"
 
 NSString *const kCardsCollection = @"Cards";
+NSString *const kNumberOfNormalCardsReviewedToday = @"numberOfNormalCardsReviewedToday";
+NSString *const kNumberOfReverseCardsReviewedToday = @"numberOfReverseCardsReviewedToday";
+NSString *const kLastNormalReviewRefresh = @"lastNormalReviewRefresh";
+NSString *const kLastReverseReviewRefresh = @"lastReverseReviewRefresh";
 
 @interface UserDataController ()
 
@@ -142,7 +146,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
 - (BOOL)isFirstNormalReviewToday {
     __block NSDate *lastRefresh = nil;
     [self.connection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
-        lastRefresh = [transaction objectForKey:@"lastNormalReviewRefresh" inCollection:nil];
+        lastRefresh = [transaction objectForKey:kLastNormalReviewRefresh inCollection:nil];
     }];
     
     BOOL isFirst = YES;
@@ -156,7 +160,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
 - (BOOL)isFirstReverseReviewToday {
     __block NSDate *lastRefresh = nil;
     [self.connection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
-        lastRefresh = [transaction objectForKey:@"lastReverseReviewRefresh" inCollection:nil];
+        lastRefresh = [transaction objectForKey:kLastReverseReviewRefresh inCollection:nil];
     }];
     
     BOOL isFirst = YES;
@@ -169,22 +173,22 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
 
 - (void)updateLastNormalRefresh {
     [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
-        [transaction setObject:[NSDate date] forKey:@"lastNormalReviewRefresh" inCollection:nil];
-        [transaction setObject:@(0) forKey:@"normalCardsReviewedToday" inCollection:nil];
+        [transaction setObject:[NSDate date] forKey:kLastNormalReviewRefresh inCollection:nil];
+        [transaction setObject:@(0) forKey:kNumberOfNormalCardsReviewedToday inCollection:nil];
     }];
 }
 
 - (void)updateLastReverseRefresh {
     [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
-        [transaction setObject:[NSDate date] forKey:@"lastReverseReviewRefresh" inCollection:nil];
-        [transaction setObject:@(0) forKey:@"reverseCardsReviewedToday" inCollection:nil];
+        [transaction setObject:[NSDate date] forKey:kLastReverseReviewRefresh inCollection:nil];
+        [transaction setObject:@(0) forKey:kNumberOfReverseCardsReviewedToday inCollection:nil];
     }];
 }
 
 - (NSInteger)normalCardsReviewedToday {
     __block NSInteger cardsReviewed = 0;
     [self.connection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
-        cardsReviewed = [[transaction objectForKey:@"numberOfNormalCardsReviewedToday" inCollection:nil] integerValue];
+        cardsReviewed = [[transaction objectForKey:kNumberOfNormalCardsReviewedToday inCollection:nil] integerValue];
     }];
     
     return cardsReviewed;
@@ -193,7 +197,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
 - (NSInteger)reverseCardsReviewedToday {
     __block NSInteger cardsReviewed = 0;
     [self.connection readWithBlock:^(YapDatabaseReadTransaction *transaction) {
-        cardsReviewed = [[transaction objectForKey:@"numberOfReverseCardsReviewedToday" inCollection:nil] integerValue];
+        cardsReviewed = [[transaction objectForKey:kNumberOfReverseCardsReviewedToday inCollection:nil] integerValue];
     }];
     
     return cardsReviewed;
@@ -202,28 +206,28 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
 - (void)incrementNormalCardsReviewedToday {
     NSInteger currentNumber = [self normalCardsReviewedToday];
     [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
-        [transaction setObject:@(currentNumber + 1) forKey:@"numberOfNormalCardsReviewedToday" inCollection:nil];
+        [transaction setObject:@(currentNumber + 1) forKey:kNumberOfNormalCardsReviewedToday inCollection:nil];
     }];
 }
 
 - (void)incrementReverseCardsReviewedToday {
     NSInteger currentNumber = [self reverseCardsReviewedToday];
     [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
-        [transaction setObject:@(currentNumber + 1) forKey:@"numberOfReverseCardsReviewedToday" inCollection:nil];
+        [transaction setObject:@(currentNumber + 1) forKey:kNumberOfReverseCardsReviewedToday inCollection:nil];
     }];
 }
 
 - (void)decrementNormalCardsReviewedToday {
     NSInteger currentNumber = [self normalCardsReviewedToday];
     [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
-        [transaction setObject:@(currentNumber - 1) forKey:@"numberOfNormalCardsReviewedToday" inCollection:nil];
+        [transaction setObject:@(currentNumber - 1) forKey:kNumberOfNormalCardsReviewedToday inCollection:nil];
     }];
 }
 
 - (void)decrementReverseCardsReviewedToday {
     NSInteger currentNumber = [self reverseCardsReviewedToday];
     [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
-        [transaction setObject:@(currentNumber - 1) forKey:@"numberOfReverseCardsReviewedToday" inCollection:nil];
+        [transaction setObject:@(currentNumber - 1) forKey:kNumberOfReverseCardsReviewedToday inCollection:nil];
     }];
 }
 
