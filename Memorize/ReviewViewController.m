@@ -147,7 +147,7 @@
 
 - (void)updateCurrentCard {
     if (self.cards.count > 0) {
-        self.currentCard = self.cards[arc4random_uniform(self.cards.count)];
+        self.currentCard = self.cards[arc4random_uniform((u_int32_t)self.cards.count)];
     } else {
         self.currentCard = nil;
     }
