@@ -81,8 +81,10 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
         NSInteger numberOfCardsToAdd = 0;
         if (cards.count < 15) {
             numberOfCardsToAdd = 10;
-        } else if (cards.count < 24) {
+        } else if (cards.count < 23) {
             numberOfCardsToAdd = 5;
+        } else if (cards.count < 27) {
+            numberOfCardsToAdd = 3;
         } else if (cards.count < 30) {
             numberOfCardsToAdd = 1;
         }
