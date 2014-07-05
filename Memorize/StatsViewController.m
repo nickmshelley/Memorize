@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSArray *reviewDayOrderedKeys;
 @property (nonatomic, assign) NSInteger readyCards;
 @property (nonatomic, assign) NSInteger totalCards;
+@property (nonatomic, assign) double averagePerDay;
 
 @end
 
@@ -39,6 +40,7 @@
     NSMutableDictionary *reviewDay = [NSMutableDictionary dictionary];
     NSArray *reviewingCards = [[UserDataController sharedController] reviewingCards];
     NSInteger readyCards = 0;
+    double reviewPerDay = 0;
     for (Card *card in reviewingCards) {
         ReviewState *reviewState = nil;
         switch (self.reviewType) {
@@ -70,6 +72,7 @@
         
         reviewLevel[@(reviewState.numSuccesses)] = levelDict;
         reviewDay[@([reviewState dayDifference])] = dayDict;
+        reviewPerDay += 1.0 / (double)[reviewState dayDifference];
     }
     
     self.reviewLevel = reviewLevel;
@@ -78,6 +81,7 @@
     self.reviewDayOrderedKeys = [self.reviewDay.allKeys sortedArrayUsingSelector:@selector(compare:)];
     self.readyCards = readyCards;
     self.totalCards = reviewingCards.count;
+    self.averagePerDay = reviewPerDay;
 }
 
 #pragma mark - Table view data source
@@ -89,7 +93,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case 0:
-            return 2;
+            return 3;
             break;
         case 1:
             return self.reviewLevel.count + 1;
@@ -107,14 +111,26 @@
     ThreeColumnTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     switch (indexPath.section) {
         case 0: {
+            switch (indexPath.row) {
+                case 0:
+                    cell.leftLabel.text = @"Total Cards:";
+                    cell.middleLabel.text = @"";
+                    cell.rightLabel.text = [NSString stringWithFormat:@"%@", @(self.totalCards)];
+                    break;
+                case 1:
+                    cell.leftLabel.text = @"Cards Ready to Review:";
+                    cell.middleLabel.text = @"";
+                    cell.rightLabel.text = [NSString stringWithFormat:@"%@", @(self.readyCards)];
+                    break;
+                case 2:
+                    cell.leftLabel.text = @"Average per Day:";
+                    cell.middleLabel.text = @"";
+                    cell.rightLabel.text = [NSString stringWithFormat:@"%.2lf", self.averagePerDay];
+            }
             if (indexPath.row == 0) {
-                cell.leftLabel.text = @"Total Cards:";
-                cell.middleLabel.text = @"";
-                cell.rightLabel.text = [NSString stringWithFormat:@"%@", @(self.totalCards)];
+                
             } else {
-                cell.leftLabel.text = @"Cards Ready to Review:";
-                cell.middleLabel.text = @"";
-                cell.rightLabel.text = [NSString stringWithFormat:@"%@", @(self.readyCards)];
+                
             }
             
             break;
