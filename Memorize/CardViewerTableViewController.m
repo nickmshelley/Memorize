@@ -20,6 +20,7 @@
 @implementation CardViewerTableViewController
 
 - (void)viewDidLoad {
+    self.tableView.allowsMultipleSelectionDuringEditing = NO;
     switch (self.viewType) {
         case ViewTypeReviewing:
             self.nodes = [[UserDataController sharedController] reviewingCards];
@@ -40,6 +41,24 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.nodes.count;
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        Card *card = self.nodes[indexPath.row];
+        [[UserDataController sharedController] deleteCard:card];
+        NSMutableArray *mutableNodes = [self.nodes mutableCopy];
+        [mutableNodes removeObject:card];
+        self.nodes = mutableNodes;
+        
+        [self.tableView beginUpdates];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView endUpdates];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

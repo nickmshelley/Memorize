@@ -251,4 +251,10 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
     }];
 }
 
+- (void)deleteCard:(Card *)card {
+    [self.connection readWriteWithBlock:^(YapDatabaseReadWriteTransaction *transaction) {
+        [transaction setObject:nil forKey:card.cardID inCollection:kCardsCollection];
+    }];
+}
+
 @end

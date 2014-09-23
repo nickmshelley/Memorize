@@ -21,6 +21,7 @@ CWL_DECLARE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedControll
 - (NSArray *)todaysNormalReviewCards;
 - (NSArray *)todaysReverseReviewCards;
 - (void)updateCard:(Card *)card;
+- (void)deleteCard:(Card *)card;
 - (void)incrementNormalCardsReviewedToday;
 - (void)incrementReverseCardsReviewedToday;
 - (void)decrementNormalCardsReviewedToday;
