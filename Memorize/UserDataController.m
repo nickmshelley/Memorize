@@ -79,10 +79,8 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
     if ([self isFirstNormalReviewToday]) {
         [self updateLastNormalRefresh];
         NSInteger numberOfCardsToAdd = 0;
-        if (cards.count < 27) {
-            numberOfCardsToAdd = 3;
-        } else if (cards.count < 30) {
-            numberOfCardsToAdd = 1;
+        if (cards.count < 30) {
+            numberOfCardsToAdd = 30 - cards.count;
         }
         for (int i = 0; i < numberOfCardsToAdd; i++) {
             Card *card = [self randomNonReviewingCard];
