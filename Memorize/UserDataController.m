@@ -18,6 +18,9 @@ NSString *const kNumberOfReverseCardsReviewedToday = @"numberOfReverseCardsRevie
 NSString *const kLastNormalReviewRefresh = @"lastNormalReviewRefresh";
 NSString *const kLastReverseReviewRefresh = @"lastReverseReviewRefresh";
 
+const NSInteger kNumberOfNormalCardsToReview = 30;
+const NSInteger kNumberOfReverseCardsToReview = 32;
+
 @interface UserDataController ()
 
 @property (nonatomic, strong) YapDatabase *database;
@@ -75,12 +78,12 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
 
 - (NSArray *)todaysNormalReviewCards {
     NSArray *cards = [[self reviewingCards] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"normalReviewState.nextReviewDate <= %@", [NSDate date]]];
-    NSInteger cardsLeft = 30;
+    NSInteger cardsLeft = kNumberOfNormalCardsToReview;
     if ([self isFirstNormalReviewToday]) {
         [self updateLastNormalRefresh];
         NSInteger numberOfCardsToAdd = 0;
-        if (cards.count < 30) {
-            numberOfCardsToAdd = 30 - cards.count;
+        if (cards.count < kNumberOfNormalCardsToReview) {
+            numberOfCardsToAdd = kNumberOfNormalCardsToReview - cards.count;
         }
         for (int i = 0; i < numberOfCardsToAdd; i++) {
             Card *card = [self randomNonReviewingCard];
@@ -114,7 +117,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
 
 - (NSArray *)todaysReverseReviewCards {
     NSArray *cards = [[self reviewingCards] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"reverseReviewState.nextReviewDate <= %@", [NSDate date]]];
-    NSInteger cardsLeft = 30;
+    NSInteger cardsLeft = kNumberOfReverseCardsToReview;
     if (![self isFirstReverseReviewToday]) {
         cardsLeft -= [self reverseCardsReviewedToday];
     } else {
