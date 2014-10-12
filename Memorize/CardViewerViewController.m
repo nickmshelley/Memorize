@@ -19,6 +19,7 @@
 @implementation CardViewerViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     UITapGestureRecognizer *questionTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(questionTapped)];
     [questionTap setNumberOfTapsRequired:1];
     [self.questionTextView addGestureRecognizer:questionTap];

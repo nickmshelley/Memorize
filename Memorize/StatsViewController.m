@@ -27,10 +27,12 @@
 @implementation StatsViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     [self processCards];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self processCards];
     [self.tableView reloadData];
 }

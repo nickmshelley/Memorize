@@ -20,6 +20,7 @@
 @implementation CardViewerTableViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
     switch (self.viewType) {
         case ViewTypeReviewing:
@@ -32,6 +33,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self.tableView reloadData];
 }
 

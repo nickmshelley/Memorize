@@ -17,6 +17,7 @@
 @implementation TextEditorViewController
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     self.textView.text = self.existingText ?: @"";
     [self.textView becomeFirstResponder];
 }

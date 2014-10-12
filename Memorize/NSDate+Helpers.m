@@ -13,9 +13,9 @@
 + (NSDate *)threeAMToday {
     NSDate *date = [NSDate date];
     NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
-    NSInteger hour = [[calendar components:NSHourCalendarUnit fromDate:date] hour];
+    NSInteger hour = [[calendar components:NSCalendarUnitHour fromDate:date] hour];
     NSInteger secondsToSubtract = hour < 3 ? 60 * 60 * 24 : 0;
-    NSUInteger preservedComponents = (NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit);
+    NSUInteger preservedComponents = (NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay);
     return [[calendar dateFromComponents:[calendar components:preservedComponents fromDate:date]] dateByAddingTimeInterval:(60 * 60 * 3 - secondsToSubtract)];
 }
 
@@ -25,12 +25,12 @@
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
-    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&fromDate
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&fromDate
                  interval:NULL forDate:fromDateTime];
-    [calendar rangeOfUnit:NSDayCalendarUnit startDate:&toDate
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&toDate
                  interval:NULL forDate:toDateTime];
     
-    NSDateComponents *difference = [calendar components:NSDayCalendarUnit
+    NSDateComponents *difference = [calendar components:NSCalendarUnitDay
                                                fromDate:fromDate toDate:toDate options:0];
     
     return [difference day];

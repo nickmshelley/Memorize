@@ -34,6 +34,7 @@
 
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     self.undoStack = [NSMutableArray array];
     switch (self.reviewType) {
         case ReviewTypeNormal:
@@ -48,6 +49,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self updateUI];
 }
 
