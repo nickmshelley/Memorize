@@ -98,11 +98,11 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
     
     if (cards.count > cardsLeft) {
         cards = [cards sortedArrayUsingComparator:^NSComparisonResult(Card *card1, Card *card2) {
-            NSInteger firstNumber = card1.normalReviewState.numSuccesses * 2 - fabs([NSDate daysBetweenDate:card1.normalReviewState.nextReviewDate andDate:[NSDate date]]);
+            NSInteger firstNumber = card1.normalReviewState.numSuccesses * 2 - labs([NSDate daysBetweenDate:card1.normalReviewState.nextReviewDate andDate:[NSDate date]]);
             if (!card1.normalReviewState.nextReviewDate) {
                 firstNumber = -1000;
             }
-            NSInteger secondNumber = card2.normalReviewState.numSuccesses * 2 - fabs([NSDate daysBetweenDate:card2.normalReviewState.nextReviewDate andDate:[NSDate date]]);
+            NSInteger secondNumber = card2.normalReviewState.numSuccesses * 2 - labs([NSDate daysBetweenDate:card2.normalReviewState.nextReviewDate andDate:[NSDate date]]);
             if (!card2.normalReviewState.nextReviewDate) {
                 secondNumber = -1000;
             }
@@ -125,11 +125,11 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
     }
     if (cards.count > cardsLeft) {
         cards = [cards sortedArrayUsingComparator:^NSComparisonResult(Card *card1, Card *card2) {
-            NSInteger firstNumber = card1.reverseReviewState.numSuccesses * 2 - fabs([NSDate daysBetweenDate:card1.reverseReviewState.nextReviewDate andDate:[NSDate date]]);
+            NSInteger firstNumber = card1.reverseReviewState.numSuccesses * 2 - labs([NSDate daysBetweenDate:card1.reverseReviewState.nextReviewDate andDate:[NSDate date]]);
             if (!card1.reverseReviewState.nextReviewDate) {
                 firstNumber = -1000;
             }
-            NSInteger secondNumber = card2.reverseReviewState.numSuccesses * 2 - fabs([NSDate daysBetweenDate:card2.reverseReviewState.nextReviewDate andDate:[NSDate date]]);
+            NSInteger secondNumber = card2.reverseReviewState.numSuccesses * 2 - labs([NSDate daysBetweenDate:card2.reverseReviewState.nextReviewDate andDate:[NSDate date]]);
             if (!card2.reverseReviewState.nextReviewDate) {
                 secondNumber = -1000;
             }

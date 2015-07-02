@@ -51,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27860172C20595F6C0D4674B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		321A5D9A1915504500D7D440 /* NSDate+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helpers.h"; sourceTree = "<group>"; };
 		321A5D9B1915504500D7D440 /* NSDate+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helpers.m"; sourceTree = "<group>"; };
 		321AC9E117F76A7F00773D4D /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +99,7 @@
 		32CC01B0190459FD00717C85 /* CardViewerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewerTableViewController.m; sourceTree = "<group>"; };
 		32EDC4DE19296A170053349E /* UndoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UndoObject.h; sourceTree = "<group>"; };
 		32EDC4DF19296A170053349E /* UndoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UndoObject.m; sourceTree = "<group>"; };
-		77A9BF0DAD244A1B97ADA790 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		6BC4E00201C0CF45254DB3E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F38FC5277F7D405BBDCF8446 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -136,7 +137,7 @@
 				321ACA0917F76A7F00773D4D /* MemorizeTests */,
 				321AC9E317F76A7F00773D4D /* Frameworks */,
 				321AC9E217F76A7F00773D4D /* Products */,
-				77A9BF0DAD244A1B97ADA790 /* Pods.xcconfig */,
+				92A6ECBE469E5659B5DF9563 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -238,6 +239,15 @@
 				3280004318F6016F00D80DB4 /* ReviewState.m */,
 			);
 			name = UserData;
+			sourceTree = "<group>";
+		};
+		92A6ECBE469E5659B5DF9563 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BC4E00201C0CF45254DB3E5 /* Pods.debug.xcconfig */,
+				27860172C20595F6C0D4674B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,7 +357,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		760141ADBB6546AEB24B28E4 /* Check Pods Manifest.lock */ = {
@@ -503,7 +513,7 @@
 		};
 		321ACA1417F76A7F00773D4D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77A9BF0DAD244A1B97ADA790 /* Pods.xcconfig */;
+			baseConfigurationReference = 6BC4E00201C0CF45254DB3E5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -516,7 +526,7 @@
 		};
 		321ACA1517F76A7F00773D4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77A9BF0DAD244A1B97ADA790 /* Pods.xcconfig */;
+			baseConfigurationReference = 27860172C20595F6C0D4674B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
