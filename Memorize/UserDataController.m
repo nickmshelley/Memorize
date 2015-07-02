@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Mine. All rights reserved.
 //
 
+#import "Memorize-Swift.h"
+
 #import "UserDataController.h"
 #import <YapDatabase/YapDatabase.h>
 #import "Card.h"
@@ -97,19 +99,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
     }
     
     if (cards.count > cardsLeft) {
-        cards = [cards sortedArrayUsingComparator:^NSComparisonResult(Card *card1, Card *card2) {
-            NSInteger firstNumber = card1.normalReviewState.numSuccesses * 2 - labs([NSDate daysBetweenDate:card1.normalReviewState.nextReviewDate andDate:[NSDate date]]);
-            if (!card1.normalReviewState.nextReviewDate) {
-                firstNumber = -1000;
-            }
-            NSInteger secondNumber = card2.normalReviewState.numSuccesses * 2 - labs([NSDate daysBetweenDate:card2.normalReviewState.nextReviewDate andDate:[NSDate date]]);
-            if (!card2.normalReviewState.nextReviewDate) {
-                secondNumber = -1000;
-            }
-            return [@(firstNumber) compare:@(secondNumber)];
-        }];
-        
-        cards = [cards subarrayWithRange:NSMakeRange(0, cardsLeft)];
+        cards = [self sampledCardsFromCards:cards sampleNumber:cardsLeft isNormalReview:YES];
     }
     
     return cards;
@@ -124,19 +114,7 @@ CWL_SYNTHESIZE_SINGLETON_FOR_CLASS_WITH_ACCESSOR(UserDataController, sharedContr
         [self updateLastReverseRefresh];
     }
     if (cards.count > cardsLeft) {
-        cards = [cards sortedArrayUsingComparator:^NSComparisonResult(Card *card1, Card *card2) {
-            NSInteger firstNumber = card1.reverseReviewState.numSuccesses * 2 - labs([NSDate daysBetweenDate:card1.reverseReviewState.nextReviewDate andDate:[NSDate date]]);
-            if (!card1.reverseReviewState.nextReviewDate) {
-                firstNumber = -1000;
-            }
-            NSInteger secondNumber = card2.reverseReviewState.numSuccesses * 2 - labs([NSDate daysBetweenDate:card2.reverseReviewState.nextReviewDate andDate:[NSDate date]]);
-            if (!card2.reverseReviewState.nextReviewDate) {
-                secondNumber = -1000;
-            }
-            return [@(firstNumber) compare:@(secondNumber)];
-        }];
-        
-        cards = [cards subarrayWithRange:NSMakeRange(0, cardsLeft)];
+        cards = [self sampledCardsFromCards:cards sampleNumber:cardsLeft isNormalReview:NO];
     }
     
     return cards;
