@@ -46,6 +46,10 @@
 		3280004118F6015D00D80DB4 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280004018F6015D00D80DB4 /* Card.m */; };
 		3280004418F6016F00D80DB4 /* ReviewState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280004318F6016F00D80DB4 /* ReviewState.m */; };
 		3280004618F60C3800D80DB4 /* existingCards.json in Resources */ = {isa = PBXBuildFile; fileRef = 3280004518F60C3800D80DB4 /* existingCards.json */; };
+		32910CE11B5C5D48002596B1 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32910CE01B5C5D48002596B1 /* ShareViewController.swift */; };
+		32910CE31B5C5D48002596B1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32910CE21B5C5D48002596B1 /* MainInterface.storyboard */; };
+		32910CE61B5C5D48002596B1 /* GLExt.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 32910CDC1B5C5D48002596B1 /* GLExt.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		32910CEC1B5C644A002596B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32910CEB1B5C6449002596B1 /* AppDelegate.swift */; };
 		32BC7AD3190DA5F000A2407B /* TextEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BC7AD2190DA5EF00A2407B /* TextEditorViewController.m */; };
 		32BC7AD6190DB92500A2407B /* ThreeColumnTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BC7AD5190DB92500A2407B /* ThreeColumnTableViewCell.m */; };
 		32CC01AE190459E700717C85 /* CardViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC01AD190459E700717C85 /* CardViewerViewController.m */; };
@@ -62,7 +66,28 @@
 			remoteGlobalIDString = 321AC9E017F76A7F00773D4D;
 			remoteInfo = Memorize;
 		};
+		32910CE41B5C5D48002596B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 321AC9D917F76A7F00773D4D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32910CDB1B5C5D48002596B1;
+			remoteInfo = GLExt;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		32910CEA1B5C5D48002596B1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				32910CE61B5C5D48002596B1 /* GLExt.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		27860172C20595F6C0D4674B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +143,11 @@
 		3280004218F6016F00D80DB4 /* ReviewState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewState.h; sourceTree = "<group>"; };
 		3280004318F6016F00D80DB4 /* ReviewState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewState.m; sourceTree = "<group>"; };
 		3280004518F60C3800D80DB4 /* existingCards.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = existingCards.json; sourceTree = "<group>"; };
+		32910CDC1B5C5D48002596B1 /* GLExt.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GLExt.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		32910CDF1B5C5D48002596B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32910CE01B5C5D48002596B1 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		32910CE21B5C5D48002596B1 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		32910CEB1B5C6449002596B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32BC7AD1190DA5EF00A2407B /* TextEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEditorViewController.h; sourceTree = "<group>"; };
 		32BC7AD2190DA5EF00A2407B /* TextEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEditorViewController.m; sourceTree = "<group>"; };
 		32BC7AD4190DB92500A2407B /* ThreeColumnTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreeColumnTableViewCell.h; sourceTree = "<group>"; };
@@ -156,6 +186,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		32910CD91B5C5D48002596B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -164,6 +201,7 @@
 			children = (
 				321AC9EC17F76A7F00773D4D /* Memorize */,
 				321ACA0917F76A7F00773D4D /* MemorizeTests */,
+				32910CDD1B5C5D48002596B1 /* GLExt */,
 				321AC9E317F76A7F00773D4D /* Frameworks */,
 				321AC9E217F76A7F00773D4D /* Products */,
 				92A6ECBE469E5659B5DF9563 /* Pods */,
@@ -175,6 +213,7 @@
 			children = (
 				321AC9E117F76A7F00773D4D /* Memorize.app */,
 				321ACA0117F76A7F00773D4D /* MemorizeTests.xctest */,
+				32910CDC1B5C5D48002596B1 /* GLExt.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,6 +237,7 @@
 				3280003B18F600F100D80DB4 /* UserData */,
 				321AC9F517F76A7F00773D4D /* AppDelegate.h */,
 				321AC9F617F76A7F00773D4D /* AppDelegate.m */,
+				32910CEB1B5C6449002596B1 /* AppDelegate.swift */,
 				321ACA1917F76AA400773D4D /* Main.storyboard */,
 				321AC9FB17F76A7F00773D4D /* Images.xcassets */,
 				321AC9F817F76A7F00773D4D /* Memorize.xcdatamodeld */,
@@ -302,6 +342,24 @@
 			name = UserData;
 			sourceTree = "<group>";
 		};
+		32910CDD1B5C5D48002596B1 /* GLExt */ = {
+			isa = PBXGroup;
+			children = (
+				32910CE01B5C5D48002596B1 /* ShareViewController.swift */,
+				32910CE21B5C5D48002596B1 /* MainInterface.storyboard */,
+				32910CDE1B5C5D48002596B1 /* Supporting Files */,
+			);
+			path = GLExt;
+			sourceTree = "<group>";
+		};
+		32910CDE1B5C5D48002596B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				32910CDF1B5C5D48002596B1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		92A6ECBE469E5659B5DF9563 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,10 +381,12 @@
 				321AC9DE17F76A7F00773D4D /* Frameworks */,
 				321AC9DF17F76A7F00773D4D /* Resources */,
 				549FCEAA90BF42258E476429 /* Copy Pods Resources */,
+				32910CEA1B5C5D48002596B1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				32910CE51B5C5D48002596B1 /* PBXTargetDependency */,
 			);
 			name = Memorize;
 			productName = Memorize;
@@ -351,6 +411,23 @@
 			productReference = 321ACA0117F76A7F00773D4D /* MemorizeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		32910CDB1B5C5D48002596B1 /* GLExt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32910CE91B5C5D48002596B1 /* Build configuration list for PBXNativeTarget "GLExt" */;
+			buildPhases = (
+				32910CD81B5C5D48002596B1 /* Sources */,
+				32910CD91B5C5D48002596B1 /* Frameworks */,
+				32910CDA1B5C5D48002596B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLExt;
+			productName = GLExt;
+			productReference = 32910CDC1B5C5D48002596B1 /* GLExt.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -362,6 +439,9 @@
 				TargetAttributes = {
 					321ACA0017F76A7F00773D4D = {
 						TestTargetID = 321AC9E017F76A7F00773D4D;
+					};
+					32910CDB1B5C5D48002596B1 = {
+						CreatedOnToolsVersion = 6.4;
 					};
 				};
 			};
@@ -379,6 +459,7 @@
 			targets = (
 				321AC9E017F76A7F00773D4D /* Memorize */,
 				321ACA0017F76A7F00773D4D /* MemorizeTests */,
+				32910CDB1B5C5D48002596B1 /* GLExt */,
 			);
 		};
 /* End PBXProject section */
@@ -400,6 +481,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				321ACA0E17F76A7F00773D4D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32910CDA1B5C5D48002596B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32910CE31B5C5D48002596B1 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +554,7 @@
 				3280003E18F6011000D80DB4 /* UserDataController.m in Sources */,
 				3280004118F6015D00D80DB4 /* Card.m in Sources */,
 				32BC7AD6190DB92500A2407B /* ThreeColumnTableViewCell.m in Sources */,
+				32910CEC1B5C644A002596B1 /* AppDelegate.swift in Sources */,
 				32221CD31B457E5F002A120B /* UserDataControllerHelpers.swift in Sources */,
 				321AC9F717F76A7F00773D4D /* AppDelegate.m in Sources */,
 				32221CEB1B458030002A120B /* Float.swift in Sources */,
@@ -484,6 +574,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		32910CD81B5C5D48002596B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32910CE11B5C5D48002596B1 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -491,6 +589,11 @@
 			isa = PBXTargetDependency;
 			target = 321AC9E017F76A7F00773D4D /* Memorize */;
 			targetProxy = 321ACA0717F76A7F00773D4D /* PBXContainerItemProxy */;
+		};
+		32910CE51B5C5D48002596B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32910CDB1B5C5D48002596B1 /* GLExt */;
+			targetProxy = 32910CE41B5C5D48002596B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -548,6 +651,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "a33ca249-0682-4539-ae54-7efcc8c8ed32";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -580,6 +684,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE = "a33ca249-0682-4539-ae54-7efcc8c8ed32";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -597,6 +702,7 @@
 				INFOPLIST_FILE = "Memorize/Memorize-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a33ca249-0682-4539-ae54-7efcc8c8ed32";
 				SWIFT_OBJC_BRIDGING_HEADER = "Memorize/Memorize-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -614,6 +720,7 @@
 				INFOPLIST_FILE = "Memorize/Memorize-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a33ca249-0682-4539-ae54-7efcc8c8ed32";
 				SWIFT_OBJC_BRIDGING_HEADER = "Memorize/Memorize-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
@@ -636,6 +743,7 @@
 				);
 				INFOPLIST_FILE = "MemorizeTests/MemorizeTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a33ca249-0682-4539-ae54-7efcc8c8ed32";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -654,8 +762,51 @@
 				GCC_PREFIX_HEADER = "Memorize/Memorize-Prefix.pch";
 				INFOPLIST_FILE = "MemorizeTests/MemorizeTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a33ca249-0682-4539-ae54-7efcc8c8ed32";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		32910CE71B5C5D48002596B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = GLExt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "91ca1a0a-21ce-4784-9117-cea93571768d";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32910CE81B5C5D48002596B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = GLExt/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "91ca1a0a-21ce-4784-9117-cea93571768d";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -685,6 +836,15 @@
 			buildConfigurations = (
 				321ACA1717F76A7F00773D4D /* Debug */,
 				321ACA1817F76A7F00773D4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32910CE91B5C5D48002596B1 /* Build configuration list for PBXNativeTarget "GLExt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32910CE71B5C5D48002596B1 /* Debug */,
+				32910CE81B5C5D48002596B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

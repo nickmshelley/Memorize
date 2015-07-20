@@ -6,6 +6,8 @@
 //  Copyright (c) 2013 Mine. All rights reserved.
 //
 
+#import "Memorize-Swift.h"
+
 #import "AppDelegate.h"
 #import "UserDataController.h"
 
@@ -25,6 +27,8 @@
     
     [defaults setBool:YES forKey:@"initialImportDone"];
     [defaults synchronize];
+    
+    [SwiftTopLevel importSharedCards];
 }
 
 @end
