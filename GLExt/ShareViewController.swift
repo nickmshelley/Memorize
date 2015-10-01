@@ -16,12 +16,12 @@ class ShareViewController: SLComposeServiceViewController {
             let lineComponents = inputText.componentsSeparatedByString("\n")
             if lineComponents.count > 1 {
                 let ref = lineComponents[0]
-                let verses = Array(lineComponents[1..<lineComponents.count]).filter { count($0) > 0 }
-                let text = "\n".join(verses)
+                let verses = Array(lineComponents[1..<lineComponents.count]).filter { $0.characters.count > 0 }
+                let text = verses.joinWithSeparator("\n")
                 
                 let elements: NSDictionary = ["ref": ref, "text": text]
                 if let sharedDefaults = NSUserDefaults(suiteName: "group.mine.memorize") {
-                    var sharedContent: NSMutableArray = NSMutableArray(array: sharedDefaults.arrayForKey("sharedContent") ?? [])
+                    let sharedContent: NSMutableArray = NSMutableArray(array: sharedDefaults.arrayForKey("sharedContent") ?? [])
                     sharedContent.addObject(elements)
                     sharedDefaults.setObject(sharedContent, forKey: "sharedContent")
                     sharedDefaults.synchronize()

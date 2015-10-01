@@ -12,11 +12,11 @@ extension UserDataController {
     
     func sampledCardsFromCards(cards: [Card], sampleNumber: Int, isNormalReview: Bool) -> [Card] {
         var sampledCards = [Card]()
-        var partitioned = cards.sorted {
+        var partitioned = cards.sort {
             let firstReviewState = isNormalReview ? $0.normalReviewState : $0.reverseReviewState
             let secondReviewState = isNormalReview ? $1.normalReviewState : $1.reverseReviewState
             if firstReviewState.numSuccesses == secondReviewState.numSuccesses {
-                return firstReviewState.nextReviewDate < secondReviewState.nextReviewDate
+                return firstReviewState.nextReviewDate.compare(secondReviewState.nextReviewDate) == .OrderedAscending
             } else {
                 return firstReviewState.numSuccesses < secondReviewState.numSuccesses
             }
@@ -27,7 +27,15 @@ extension UserDataController {
                     sampledCards.append(dayArray[0])
                 }
             }
-            partitioned = partitioned.mapFilter { $0.count > 1 ? $0.tail($0.count - 1) : nil }
+            partitioned = partitioned.flatMap { cards in
+                if cards.count > 1 {
+                    var mutableCards = cards
+                    mutableCards.removeAtIndex(0)
+                    return mutableCards
+                } else {
+                    return nil
+                }
+            }
         }
         
         return sampledCards

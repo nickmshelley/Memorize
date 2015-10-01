@@ -42,6 +42,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"count: %@", @(self.nodes.count));
     return self.nodes.count;
 }
 

@@ -8,11 +8,9 @@
 
 import Foundation
 
-@objc class SwiftTopLevel {
+class SwiftTopLevel: NSObject {
     
     static func importSharedCards() {
-        let sharedDefaults = NSUserDefaults(suiteName: "group.mine.memorize")!
-        let sharedContent = sharedDefaults.arrayForKey("sharedContent")
         if let sharedDefaults = NSUserDefaults(suiteName: "group.mine.memorize"), sharedContent = sharedDefaults.arrayForKey("sharedContent") as? [[String: String]] {
             for elements in sharedContent {
                 if let ref = elements["ref"], text = elements["text"] {
@@ -24,7 +22,7 @@ import Foundation
                         card.question = ref
                     }
                     
-                    card.answer = "\n".join(text.componentsSeparatedByString("\n").map { "  " + $0 })
+                    card.answer = text.componentsSeparatedByString("\n").map { "  " + $0 }.joinWithSeparator("\n")
                     card.synchronize()
                 }
             }
