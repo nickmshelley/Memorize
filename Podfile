@@ -1,4 +1,8 @@
-platform :ios, '7.0'
+platform :ios, '9.0'
+use_frameworks!
 
-pod 'YapDatabase', '~> 2.4'
-pod 'CWLSynthesizeSingleton', '~> 1.0'
+target 'Memorize' do
+  pod 'YapDatabase'
+  pod 'CWLSynthesizeSingleton'
+  pod 'Swiftification'
+end

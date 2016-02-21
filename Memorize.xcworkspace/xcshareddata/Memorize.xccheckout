@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>47672098-CBB4-45CB-8E51-B333E6BC8755</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Memorize</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3687A857BA6ED62E818C38065FF7633207B11886</key>
+		<string>https://github.com/nickmshelley/Memorize.git</string>
+		<key>E2F476CE895D3596DBE8080E8F363F8F94823E70</key>
+		<string>https://github.com/pNre/ExSwift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Memorize.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3687A857BA6ED62E818C38065FF7633207B11886</key>
+		<string>..</string>
+		<key>E2F476CE895D3596DBE8080E8F363F8F94823E70</key>
+		<string>../External/ExSwift</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/nickmshelley/Memorize.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3687A857BA6ED62E818C38065FF7633207B11886</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E2F476CE895D3596DBE8080E8F363F8F94823E70</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ExSwift</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3687A857BA6ED62E818C38065FF7633207B11886</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Memorize</string>
+		</dict>
+	</array>
+</dict>
+</plist>

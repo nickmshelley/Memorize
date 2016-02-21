@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3687A857BA6ED62E818C38065FF7633207B11886",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3687A857BA6ED62E818C38065FF7633207B11886" : 0,
+    "E2F476CE895D3596DBE8080E8F363F8F94823E70" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "47672098-CBB4-45CB-8E51-B333E6BC8755",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3687A857BA6ED62E818C38065FF7633207B11886" : "Memorize",
+    "E2F476CE895D3596DBE8080E8F363F8F94823E70" : "Memorize\/External\/ExSwift"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Memorize",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Memorize.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nickmshelley\/Memorize.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3687A857BA6ED62E818C38065FF7633207B11886"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pNre\/ExSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E2F476CE895D3596DBE8080E8F363F8F94823E70"
+    }
+  ]
+}

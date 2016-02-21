@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FC0A64CCFECEFD0F8CDE132 /* Pods_Memorize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188FFE91E09198E2E4797BF0 /* Pods_Memorize.framework */; };
 		321A5D9C1915504500D7D440 /* NSDate+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 321A5D9B1915504500D7D440 /* NSDate+Helpers.m */; };
 		321AC9E517F76A7F00773D4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321AC9E417F76A7F00773D4D /* Foundation.framework */; };
 		321AC9E717F76A7F00773D4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321AC9E617F76A7F00773D4D /* CoreGraphics.framework */; };
@@ -27,7 +28,7 @@
 		32221CD31B457E5F002A120B /* UserDataControllerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32221CD21B457E5F002A120B /* UserDataControllerHelpers.swift */; };
 		322FEDD317F7C2DD007B4AC3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322FEDD217F7C2DD007B4AC3 /* MasterViewController.m */; };
 		322FEDD617F7C4C0007B4AC3 /* ReviewTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */; };
-		323CBCB21BBCD9BA005A809B /* ArrayHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323CBCB11BBCD9BA005A809B /* ArrayHelpers.swift */; settings = {ASSET_TAGS = (); }; };
+		323CBCB21BBCD9BA005A809B /* ArrayHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323CBCB11BBCD9BA005A809B /* ArrayHelpers.swift */; };
 		3255F58D17FC524D00ECFB02 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3255F58C17FC524D00ECFB02 /* ReviewViewController.m */; };
 		3278D6D517F9B98500632B49 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278D6D417F9B98500632B49 /* StatsViewController.m */; };
 		3280003E18F6011000D80DB4 /* UserDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280003D18F6011000D80DB4 /* UserDataController.m */; };
@@ -43,7 +44,6 @@
 		32CC01AE190459E700717C85 /* CardViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC01AD190459E700717C85 /* CardViewerViewController.m */; };
 		32CC01B1190459FD00717C85 /* CardViewerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC01B0190459FD00717C85 /* CardViewerTableViewController.m */; };
 		32EDC4E019296A170053349E /* UndoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EDC4DF19296A170053349E /* UndoObject.m */; };
-		DCCA0F1A1FF042059C492A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F38FC5277F7D405BBDCF8446 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		27860172C20595F6C0D4674B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		0C15E7625579DBA5B784043F /* Pods-Memorize.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memorize.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memorize/Pods-Memorize.release.xcconfig"; sourceTree = "<group>"; };
+		188FFE91E09198E2E4797BF0 /* Pods_Memorize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memorize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		321A5D9A1915504500D7D440 /* NSDate+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helpers.h"; sourceTree = "<group>"; };
 		321A5D9B1915504500D7D440 /* NSDate+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helpers.m"; sourceTree = "<group>"; };
 		321AC9E117F76A7F00773D4D /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,8 +135,7 @@
 		32CC01B0190459FD00717C85 /* CardViewerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewerTableViewController.m; sourceTree = "<group>"; };
 		32EDC4DE19296A170053349E /* UndoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UndoObject.h; sourceTree = "<group>"; };
 		32EDC4DF19296A170053349E /* UndoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UndoObject.m; sourceTree = "<group>"; };
-		6BC4E00201C0CF45254DB3E5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		F38FC5277F7D405BBDCF8446 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74B7404CE762929FFEB6DC9C /* Pods-Memorize.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memorize.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memorize/Pods-Memorize.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +147,7 @@
 				321AC9EB17F76A7F00773D4D /* CoreData.framework in Frameworks */,
 				321AC9E917F76A7F00773D4D /* UIKit.framework in Frameworks */,
 				321AC9E517F76A7F00773D4D /* Foundation.framework in Frameworks */,
-				DCCA0F1A1FF042059C492A3B /* libPods.a in Frameworks */,
+				1FC0A64CCFECEFD0F8CDE132 /* Pods_Memorize.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +180,7 @@
 				32910CDD1B5C5D48002596B1 /* GLExt */,
 				321AC9E317F76A7F00773D4D /* Frameworks */,
 				321AC9E217F76A7F00773D4D /* Products */,
-				92A6ECBE469E5659B5DF9563 /* Pods */,
+				DA309F1A4BBD4D58F474E032 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,7 +202,7 @@
 				321AC9E817F76A7F00773D4D /* UIKit.framework */,
 				321AC9EA17F76A7F00773D4D /* CoreData.framework */,
 				321ACA0217F76A7F00773D4D /* XCTest.framework */,
-				F38FC5277F7D405BBDCF8446 /* libPods.a */,
+				188FFE91E09198E2E4797BF0 /* Pods_Memorize.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,11 +307,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		92A6ECBE469E5659B5DF9563 /* Pods */ = {
+		DA309F1A4BBD4D58F474E032 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6BC4E00201C0CF45254DB3E5 /* Pods.debug.xcconfig */,
-				27860172C20595F6C0D4674B /* Pods.release.xcconfig */,
+				74B7404CE762929FFEB6DC9C /* Pods-Memorize.debug.xcconfig */,
+				0C15E7625579DBA5B784043F /* Pods-Memorize.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -323,12 +323,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 321ACA1317F76A7F00773D4D /* Build configuration list for PBXNativeTarget "Memorize" */;
 			buildPhases = (
-				760141ADBB6546AEB24B28E4 /* Check Pods Manifest.lock */,
+				8AF04879E283B6A4B1C9A613 /* Check Pods Manifest.lock */,
 				321AC9DD17F76A7F00773D4D /* Sources */,
 				321AC9DE17F76A7F00773D4D /* Frameworks */,
 				321AC9DF17F76A7F00773D4D /* Resources */,
-				549FCEAA90BF42258E476429 /* Copy Pods Resources */,
 				32910CEA1B5C5D48002596B1 /* Embed App Extensions */,
+				41FEA2A7AD79AB0CB1FA9127 /* Embed Pods Frameworks */,
+				D713CD45B091D31F9E829A25 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -386,11 +387,15 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Mine;
 				TargetAttributes = {
+					321AC9E017F76A7F00773D4D = {
+						DevelopmentTeam = RL83P3L6E2;
+					};
 					321ACA0017F76A7F00773D4D = {
 						TestTargetID = 321AC9E017F76A7F00773D4D;
 					};
 					32910CDB1B5C5D48002596B1 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = RL83P3L6E2;
 					};
 				};
 			};
@@ -444,22 +449,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		549FCEAA90BF42258E476429 /* Copy Pods Resources */ = {
+		41FEA2A7AD79AB0CB1FA9127 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Memorize/Pods-Memorize-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		760141ADBB6546AEB24B28E4 /* Check Pods Manifest.lock */ = {
+		8AF04879E283B6A4B1C9A613 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -472,6 +477,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D713CD45B091D31F9E829A25 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Memorize/Pods-Memorize-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -633,17 +653,19 @@
 		};
 		321ACA1417F76A7F00773D4D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BC4E00201C0CF45254DB3E5 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 74B7404CE762929FFEB6DC9C /* Pods-Memorize.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Memorize/Memorize-Prefix.pch";
 				INFOPLIST_FILE = "Memorize/Memorize-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mine.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a33ca249-0682-4539-ae54-7efcc8c8ed32";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Memorize/Memorize-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
@@ -652,17 +674,19 @@
 		};
 		321ACA1517F76A7F00773D4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27860172C20595F6C0D4674B /* Pods.release.xcconfig */;
+			baseConfigurationReference = 0C15E7625579DBA5B784043F /* Pods-Memorize.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Memorize/Memorize-Prefix.pch";
 				INFOPLIST_FILE = "Memorize/Memorize-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mine.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a33ca249-0682-4539-ae54-7efcc8c8ed32";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Memorize/Memorize-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
@@ -716,6 +740,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -730,7 +756,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "Mine.Memorize.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "91ca1a0a-21ce-4784-9117-cea93571768d";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -740,6 +766,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -751,7 +779,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "Mine.Memorize.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "91ca1a0a-21ce-4784-9117-cea93571768d";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

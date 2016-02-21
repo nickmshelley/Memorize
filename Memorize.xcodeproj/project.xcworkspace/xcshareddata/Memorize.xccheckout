@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E682B324-A825-4308-B106-175A24A68DE2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Memorize</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8A757089-2704-480F-A36A-C8047A3343AF</key>
+		<string>https://github.com/nickmshelley/Memorize.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Memorize.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8A757089-2704-480F-A36A-C8047A3343AF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/nickmshelley/Memorize.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8A757089-2704-480F-A36A-C8047A3343AF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8A757089-2704-480F-A36A-C8047A3343AF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Memorize</string>
+		</dict>
+	</array>
+</dict>
+</plist>
