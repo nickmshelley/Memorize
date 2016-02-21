@@ -28,7 +28,6 @@
 		32221CD31B457E5F002A120B /* UserDataControllerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32221CD21B457E5F002A120B /* UserDataControllerHelpers.swift */; };
 		322FEDD317F7C2DD007B4AC3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322FEDD217F7C2DD007B4AC3 /* MasterViewController.m */; };
 		322FEDD617F7C4C0007B4AC3 /* ReviewTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */; };
-		323CBCB21BBCD9BA005A809B /* ArrayHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323CBCB11BBCD9BA005A809B /* ArrayHelpers.swift */; };
 		3255F58D17FC524D00ECFB02 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3255F58C17FC524D00ECFB02 /* ReviewViewController.m */; };
 		3278D6D517F9B98500632B49 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278D6D417F9B98500632B49 /* StatsViewController.m */; };
 		3280003E18F6011000D80DB4 /* UserDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280003D18F6011000D80DB4 /* UserDataController.m */; };
@@ -107,7 +106,6 @@
 		322FEDD217F7C2DD007B4AC3 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		322FEDD417F7C4C0007B4AC3 /* ReviewTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTabViewController.h; sourceTree = "<group>"; };
 		322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTabViewController.m; sourceTree = "<group>"; };
-		323CBCB11BBCD9BA005A809B /* ArrayHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayHelpers.swift; sourceTree = "<group>"; };
 		3255F58B17FC524D00ECFB02 /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
 		3255F58C17FC524D00ECFB02 /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
 		3255F58E17FC54BC00ECFB02 /* ReviewType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewType.h; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 		321AC9EC17F76A7F00773D4D /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
-				323CBCB11BBCD9BA005A809B /* ArrayHelpers.swift */,
 				3280003B18F600F100D80DB4 /* UserData */,
 				321AC9F517F76A7F00773D4D /* AppDelegate.h */,
 				321AC9F617F76A7F00773D4D /* AppDelegate.m */,
@@ -516,7 +513,6 @@
 				32BC7AD6190DB92500A2407B /* ThreeColumnTableViewCell.m in Sources */,
 				32910CEC1B5C644A002596B1 /* AppDelegate.swift in Sources */,
 				32221CD31B457E5F002A120B /* UserDataControllerHelpers.swift in Sources */,
-				323CBCB21BBCD9BA005A809B /* ArrayHelpers.swift in Sources */,
 				321AC9F717F76A7F00773D4D /* AppDelegate.m in Sources */,
 				321AC9F317F76A7F00773D4D /* main.m in Sources */,
 				3255F58D17FC524D00ECFB02 /* ReviewViewController.m in Sources */,

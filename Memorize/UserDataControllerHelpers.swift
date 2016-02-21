@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import Swiftification
 
 extension UserDataController {
     
     func sampledCardsFromCards(cards: [Card], sampleNumber: Int, isNormalReview: Bool) -> [Card] {
+        guard sampleNumber < cards.count else { return cards }
         var sampledCards = [Card]()
-        var partitioned = cards.sort {
+        let partitioned = cards.sort {
             let firstReviewState = isNormalReview ? $0.normalReviewState : $0.reverseReviewState
             let secondReviewState = isNormalReview ? $1.normalReviewState : $1.reverseReviewState
             if firstReviewState.numSuccesses == secondReviewState.numSuccesses {
@@ -20,25 +22,22 @@ extension UserDataController {
             } else {
                 return firstReviewState.numSuccesses < secondReviewState.numSuccesses
             }
-            }.partitionBy { isNormalReview ? $0.normalReviewState.numSuccesses : $0.reverseReviewState.numSuccesses }
+            }.sectionBy { isNormalReview ? String($0.normalReviewState.numSuccesses) : String($0.reverseReviewState.numSuccesses) }
+        var currentIndex = 0
         while sampledCards.count < sampleNumber {
-            for dayArray in partitioned {
-                if sampledCards.count < sampleNumber {
-                    sampledCards.append(dayArray[0])
+            for day in partitioned {
+                if sampledCards.count < sampleNumber, let card = day.items[safe: currentIndex] {
+                    sampledCards.append(card)
                 }
             }
-            partitioned = partitioned.flatMap { cards in
-                if cards.count > 1 {
-                    var mutableCards = cards
-                    mutableCards.removeAtIndex(0)
-                    return mutableCards
-                } else {
-                    return nil
-                }
-            }
+            currentIndex += 1
         }
         
         return sampledCards
+    }
+    
+    func numberOfOneDayNormalReviewCardsFromCards(cards: [Card]) -> Int {
+        return cards.groupBy { $0.normalReviewState.numSuccesses }[1]?.count ?? 0
     }
     
 }
