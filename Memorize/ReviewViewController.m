@@ -7,7 +7,6 @@
 //
 
 #import "ReviewViewController.h"
-#import "ReviewTabViewController.h"
 #import "NSDate+Helpers.h"
 #import "Card.h"
 #import "UserDataController.h"

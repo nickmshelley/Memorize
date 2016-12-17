@@ -25,7 +25,6 @@
 		321ACA1017F76A7F00773D4D /* MemorizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 321ACA0F17F76A7F00773D4D /* MemorizeTests.m */; };
 		321ACA1A17F76AA400773D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321ACA1917F76AA400773D4D /* Main.storyboard */; };
 		32221CD31B457E5F002A120B /* UserDataControllerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32221CD21B457E5F002A120B /* UserDataControllerHelpers.swift */; };
-		322FEDD617F7C4C0007B4AC3 /* ReviewTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */; };
 		3255F58D17FC524D00ECFB02 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3255F58C17FC524D00ECFB02 /* ReviewViewController.m */; };
 		3278D6D517F9B98500632B49 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278D6D417F9B98500632B49 /* StatsViewController.m */; };
 		3280003E18F6011000D80DB4 /* UserDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280003D18F6011000D80DB4 /* UserDataController.m */; };
@@ -98,8 +97,6 @@
 		321ACA1917F76AA400773D4D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		32221CD11B457E5E002A120B /* Memorize-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memorize-Bridging-Header.h"; sourceTree = "<group>"; };
 		32221CD21B457E5F002A120B /* UserDataControllerHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataControllerHelpers.swift; sourceTree = "<group>"; };
-		322FEDD417F7C4C0007B4AC3 /* ReviewTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTabViewController.h; sourceTree = "<group>"; };
-		322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTabViewController.m; sourceTree = "<group>"; };
 		3255F58B17FC524D00ECFB02 /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
 		3255F58C17FC524D00ECFB02 /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
 		3255F58E17FC54BC00ECFB02 /* ReviewType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewType.h; sourceTree = "<group>"; };
@@ -209,8 +206,6 @@
 				321AC9F817F76A7F00773D4D /* Memorize.xcdatamodeld */,
 				321AC9ED17F76A7F00773D4D /* Supporting Files */,
 				1191C8D31E059C3000E664E2 /* MasterViewController.swift */,
-				322FEDD417F7C4C0007B4AC3 /* ReviewTabViewController.h */,
-				322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */,
 				3278D6D317F9B98500632B49 /* StatsViewController.h */,
 				3278D6D417F9B98500632B49 /* StatsViewController.m */,
 				3255F58B17FC524D00ECFB02 /* ReviewViewController.h */,
@@ -491,7 +486,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				32CC01B1190459FD00717C85 /* CardViewerTableViewController.m in Sources */,
-				322FEDD617F7C4C0007B4AC3 /* ReviewTabViewController.m in Sources */,
 				3280004418F6016F00D80DB4 /* ReviewState.m in Sources */,
 				32CC01AE190459E700717C85 /* CardViewerViewController.m in Sources */,
 				32EDC4E019296A170053349E /* UndoObject.m in Sources */,
