@@ -14,8 +14,6 @@
 		321AC9E917F76A7F00773D4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321AC9E817F76A7F00773D4D /* UIKit.framework */; };
 		321AC9EB17F76A7F00773D4D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321AC9EA17F76A7F00773D4D /* CoreData.framework */; };
 		321AC9F117F76A7F00773D4D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 321AC9EF17F76A7F00773D4D /* InfoPlist.strings */; };
-		321AC9F317F76A7F00773D4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 321AC9F217F76A7F00773D4D /* main.m */; };
-		321AC9F717F76A7F00773D4D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 321AC9F617F76A7F00773D4D /* AppDelegate.m */; };
 		321AC9FA17F76A7F00773D4D /* Memorize.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 321AC9F817F76A7F00773D4D /* Memorize.xcdatamodeld */; };
 		321AC9FC17F76A7F00773D4D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 321AC9FB17F76A7F00773D4D /* Images.xcassets */; };
 		321ACA0317F76A7F00773D4D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321ACA0217F76A7F00773D4D /* XCTest.framework */; };
@@ -88,10 +86,7 @@
 		321AC9EA17F76A7F00773D4D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		321AC9EE17F76A7F00773D4D /* Memorize-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Memorize-Info.plist"; sourceTree = "<group>"; };
 		321AC9F017F76A7F00773D4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		321AC9F217F76A7F00773D4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		321AC9F417F76A7F00773D4D /* Memorize-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memorize-Prefix.pch"; sourceTree = "<group>"; };
-		321AC9F517F76A7F00773D4D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		321AC9F617F76A7F00773D4D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		321AC9F917F76A7F00773D4D /* Memorize.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Memorize.xcdatamodel; sourceTree = "<group>"; };
 		321AC9FB17F76A7F00773D4D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		321ACA0117F76A7F00773D4D /* MemorizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemorizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,8 +204,6 @@
 			isa = PBXGroup;
 			children = (
 				3280003B18F600F100D80DB4 /* UserData */,
-				321AC9F517F76A7F00773D4D /* AppDelegate.h */,
-				321AC9F617F76A7F00773D4D /* AppDelegate.m */,
 				32910CEB1B5C6449002596B1 /* AppDelegate.swift */,
 				321ACA1917F76AA400773D4D /* Main.storyboard */,
 				321AC9FB17F76A7F00773D4D /* Images.xcassets */,
@@ -246,7 +239,6 @@
 			children = (
 				321AC9EE17F76A7F00773D4D /* Memorize-Info.plist */,
 				321AC9EF17F76A7F00773D4D /* InfoPlist.strings */,
-				321AC9F217F76A7F00773D4D /* main.m */,
 				321AC9F417F76A7F00773D4D /* Memorize-Prefix.pch */,
 				32221CD11B457E5E002A120B /* Memorize-Bridging-Header.h */,
 			);
@@ -515,8 +507,6 @@
 				32BC7AD6190DB92500A2407B /* ThreeColumnTableViewCell.m in Sources */,
 				32910CEC1B5C644A002596B1 /* AppDelegate.swift in Sources */,
 				32221CD31B457E5F002A120B /* UserDataControllerHelpers.swift in Sources */,
-				321AC9F717F76A7F00773D4D /* AppDelegate.m in Sources */,
-				321AC9F317F76A7F00773D4D /* main.m in Sources */,
 				3255F58D17FC524D00ECFB02 /* ReviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

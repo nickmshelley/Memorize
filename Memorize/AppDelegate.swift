@@ -8,9 +8,27 @@
 
 import Foundation
 
-class SwiftTopLevel: NSObject {
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    static func importSharedCards() {
+    var window: UIWindow?
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        let defaults = UserDefaults.standard
+        let hasDoneInitialImport = defaults.bool(forKey: "initialImportDone")
+        if !hasDoneInitialImport {
+            UserDataController.shared().importInitialData()
+        }
+        defaults.set(true, forKey: "initialImportDone")
+        defaults.synchronize()
+        importSharedCards()
+    }
+    
+    fileprivate func importSharedCards() {
         if let sharedDefaults = UserDefaults(suiteName: "group.mine.memorize"), let sharedContent = sharedDefaults.array(forKey: "sharedContent") as? [[String: String]] {
             for elements in sharedContent {
                 if let ref = elements["ref"], let text = elements["text"] {
@@ -31,5 +49,4 @@ class SwiftTopLevel: NSObject {
             sharedDefaults.synchronize()
         }
     }
-    
 }
