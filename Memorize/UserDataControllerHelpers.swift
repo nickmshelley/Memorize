@@ -11,18 +11,18 @@ import Swiftification
 
 extension UserDataController {
     
-    func sampledCardsFromCards(cards: [Card], sampleNumber: Int, isNormalReview: Bool) -> [Card] {
+    func sampledCardsFromCards(_ cards: [Card], sampleNumber: Int, isNormalReview: Bool) -> [Card] {
         guard sampleNumber < cards.count else { return cards }
         var sampledCards = [Card]()
-        let partitioned = cards.sort {
-            let firstReviewState = isNormalReview ? $0.normalReviewState : $0.reverseReviewState
-            let secondReviewState = isNormalReview ? $1.normalReviewState : $1.reverseReviewState
+        let partitioned = cards.sorted {
+            let firstReviewState = isNormalReview ? $0.normalReviewState! : $0.reverseReviewState!
+            let secondReviewState = isNormalReview ? $1.normalReviewState! : $1.reverseReviewState!
             if firstReviewState.numSuccesses == secondReviewState.numSuccesses {
-                return firstReviewState.nextReviewDate.compare(secondReviewState.nextReviewDate) == .OrderedAscending
+                return firstReviewState.nextReviewDate.compare(secondReviewState.nextReviewDate) == .orderedAscending
             } else {
                 return firstReviewState.numSuccesses < secondReviewState.numSuccesses
             }
-            }.sectionBy { isNormalReview ? String($0.normalReviewState.numSuccesses) : String($0.reverseReviewState.numSuccesses) }
+            }.sectioned { isNormalReview ? String($0.normalReviewState.numSuccesses) : String($0.reverseReviewState.numSuccesses) }
         var currentIndex = 0
         while sampledCards.count < sampleNumber {
             for day in partitioned {
@@ -36,8 +36,8 @@ extension UserDataController {
         return sampledCards
     }
     
-    func numberOfOneDayNormalReviewCardsFromCards(cards: [Card]) -> Int {
-        return cards.groupBy { $0.normalReviewState.numSuccesses }[1]?.count ?? 0
+    func numberOfOneDayNormalReviewCardsFromCards(_ cards: [Card]) -> Int {
+        return cards.grouped { $0.normalReviewState.numSuccesses }[1]?.count ?? 0
     }
     
 }

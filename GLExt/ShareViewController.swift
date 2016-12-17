@@ -12,18 +12,18 @@ import Social
 class ShareViewController: SLComposeServiceViewController {
 
     override func didSelectPost() {
-        if let firstExtensionItem = extensionContext?.inputItems.first as? NSExtensionItem, inputText = firstExtensionItem.attributedContentText?.string {
-            let lineComponents = inputText.componentsSeparatedByString("\n")
+        if let firstExtensionItem = extensionContext?.inputItems.first as? NSExtensionItem, let inputText = firstExtensionItem.attributedContentText?.string {
+            let lineComponents = inputText.components(separatedBy: "\n")
             if lineComponents.count > 1 {
                 let ref = lineComponents[0]
                 let verses = Array(lineComponents[1..<lineComponents.count]).filter { $0.characters.count > 0 }
-                let text = verses.joinWithSeparator("\n")
+                let text = verses.joined(separator: "\n")
                 
                 let elements: NSDictionary = ["ref": ref, "text": text]
-                if let sharedDefaults = NSUserDefaults(suiteName: "group.mine.memorize") {
-                    let sharedContent: NSMutableArray = NSMutableArray(array: sharedDefaults.arrayForKey("sharedContent") ?? [])
-                    sharedContent.addObject(elements)
-                    sharedDefaults.setObject(sharedContent, forKey: "sharedContent")
+                if let sharedDefaults = UserDefaults(suiteName: "group.mine.memorize") {
+                    let sharedContent: NSMutableArray = NSMutableArray(array: sharedDefaults.array(forKey: "sharedContent") ?? [])
+                    sharedContent.add(elements)
+                    sharedDefaults.set(sharedContent, forKey: "sharedContent")
                     sharedDefaults.synchronize()
                 } else {
                     assert(false, "Fail!!!!")
@@ -31,7 +31,7 @@ class ShareViewController: SLComposeServiceViewController {
             }
         }
     
-        self.extensionContext?.completeRequestReturningItems([], completionHandler: nil)
+        self.extensionContext?.completeRequest(returningItems: [], completionHandler: nil)
     }
 
 }

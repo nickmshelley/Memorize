@@ -9,7 +9,7 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "47672098-CBB4-45CB-8E51-B333E6BC8755",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "3687A857BA6ED62E818C38065FF7633207B11886" : "Memorize",
+    "3687A857BA6ED62E818C38065FF7633207B11886" : "Memorize\/",
     "E2F476CE895D3596DBE8080E8F363F8F94823E70" : "Memorize\/External\/ExSwift"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Memorize",
