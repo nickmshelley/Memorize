@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1191C8D41E059C3000E664E2 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1191C8D31E059C3000E664E2 /* MasterViewController.swift */; };
 		1FC0A64CCFECEFD0F8CDE132 /* Pods_Memorize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188FFE91E09198E2E4797BF0 /* Pods_Memorize.framework */; };
 		321A5D9C1915504500D7D440 /* NSDate+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 321A5D9B1915504500D7D440 /* NSDate+Helpers.m */; };
 		321AC9E517F76A7F00773D4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 321AC9E417F76A7F00773D4D /* Foundation.framework */; };
@@ -24,7 +25,6 @@
 		321ACA1017F76A7F00773D4D /* MemorizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 321ACA0F17F76A7F00773D4D /* MemorizeTests.m */; };
 		321ACA1A17F76AA400773D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321ACA1917F76AA400773D4D /* Main.storyboard */; };
 		32221CD31B457E5F002A120B /* UserDataControllerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32221CD21B457E5F002A120B /* UserDataControllerHelpers.swift */; };
-		322FEDD317F7C2DD007B4AC3 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322FEDD217F7C2DD007B4AC3 /* MasterViewController.m */; };
 		322FEDD617F7C4C0007B4AC3 /* ReviewTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */; };
 		3255F58D17FC524D00ECFB02 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3255F58C17FC524D00ECFB02 /* ReviewViewController.m */; };
 		3278D6D517F9B98500632B49 /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3278D6D417F9B98500632B49 /* StatsViewController.m */; };
@@ -76,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		0C15E7625579DBA5B784043F /* Pods-Memorize.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memorize.release.xcconfig"; path = "Pods/Target Support Files/Pods-Memorize/Pods-Memorize.release.xcconfig"; sourceTree = "<group>"; };
+		1191C8D31E059C3000E664E2 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		188FFE91E09198E2E4797BF0 /* Pods_Memorize.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Memorize.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		321A5D9A1915504500D7D440 /* NSDate+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helpers.h"; sourceTree = "<group>"; };
 		321A5D9B1915504500D7D440 /* NSDate+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helpers.m"; sourceTree = "<group>"; };
@@ -97,8 +98,6 @@
 		321ACA1917F76AA400773D4D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		32221CD11B457E5E002A120B /* Memorize-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memorize-Bridging-Header.h"; sourceTree = "<group>"; };
 		32221CD21B457E5F002A120B /* UserDataControllerHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataControllerHelpers.swift; sourceTree = "<group>"; };
-		322FEDD117F7C2DD007B4AC3 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		322FEDD217F7C2DD007B4AC3 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		322FEDD417F7C4C0007B4AC3 /* ReviewTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewTabViewController.h; sourceTree = "<group>"; };
 		322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewTabViewController.m; sourceTree = "<group>"; };
 		3255F58B17FC524D00ECFB02 /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
@@ -209,8 +208,7 @@
 				321AC9FB17F76A7F00773D4D /* Images.xcassets */,
 				321AC9F817F76A7F00773D4D /* Memorize.xcdatamodeld */,
 				321AC9ED17F76A7F00773D4D /* Supporting Files */,
-				322FEDD117F7C2DD007B4AC3 /* MasterViewController.h */,
-				322FEDD217F7C2DD007B4AC3 /* MasterViewController.m */,
+				1191C8D31E059C3000E664E2 /* MasterViewController.swift */,
 				322FEDD417F7C4C0007B4AC3 /* ReviewTabViewController.h */,
 				322FEDD517F7C4C0007B4AC3 /* ReviewTabViewController.m */,
 				3278D6D317F9B98500632B49 /* StatsViewController.h */,
@@ -498,11 +496,11 @@
 				32CC01AE190459E700717C85 /* CardViewerViewController.m in Sources */,
 				32EDC4E019296A170053349E /* UndoObject.m in Sources */,
 				321A5D9C1915504500D7D440 /* NSDate+Helpers.m in Sources */,
-				322FEDD317F7C2DD007B4AC3 /* MasterViewController.m in Sources */,
 				3278D6D517F9B98500632B49 /* StatsViewController.m in Sources */,
 				32BC7AD3190DA5F000A2407B /* TextEditorViewController.m in Sources */,
 				321AC9FA17F76A7F00773D4D /* Memorize.xcdatamodeld in Sources */,
 				3280003E18F6011000D80DB4 /* UserDataController.m in Sources */,
+				1191C8D41E059C3000E664E2 /* MasterViewController.swift in Sources */,
 				3280004118F6015D00D80DB4 /* Card.m in Sources */,
 				32BC7AD6190DB92500A2407B /* ThreeColumnTableViewCell.m in Sources */,
 				32910CEC1B5C644A002596B1 /* AppDelegate.swift in Sources */,
