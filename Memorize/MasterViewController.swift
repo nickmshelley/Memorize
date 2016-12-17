@@ -24,6 +24,17 @@ class MasterViewController: UITableViewController {
             }
         }
         
+        if let statsViewController = segue.destination as? StatsViewController {
+            switch idendifier {
+            case "NormalStats":
+                statsViewController.reviewType = .normal
+            case "ReverseStats":
+                statsViewController.reviewType = .reverse
+            default:
+                break
+            }
+        }
+        
         if let cardViewerController = segue.destination as? CardViewerTableViewController {
             switch idendifier {
             case "Reviewing":
