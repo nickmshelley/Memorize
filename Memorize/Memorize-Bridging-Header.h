@@ -9,6 +9,6 @@
 #import "ReviewType.h"
 #import "UserDataController.h"
 #import "ReviewState.h"
-#import "ReviewViewController.h"
 #import "CardViewerTableViewController.h"
 #import "ThreeColumnTableViewCell.h"
+#import "CardViewerViewController.h"

@@ -26,7 +26,6 @@
 		321ACA1017F76A7F00773D4D /* MemorizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 321ACA0F17F76A7F00773D4D /* MemorizeTests.m */; };
 		321ACA1A17F76AA400773D4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 321ACA1917F76AA400773D4D /* Main.storyboard */; };
 		32221CD31B457E5F002A120B /* UserDataControllerHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32221CD21B457E5F002A120B /* UserDataControllerHelpers.swift */; };
-		3255F58D17FC524D00ECFB02 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3255F58C17FC524D00ECFB02 /* ReviewViewController.m */; };
 		3280003E18F6011000D80DB4 /* UserDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280003D18F6011000D80DB4 /* UserDataController.m */; };
 		3280004118F6015D00D80DB4 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280004018F6015D00D80DB4 /* Card.m */; };
 		3280004418F6016F00D80DB4 /* ReviewState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3280004318F6016F00D80DB4 /* ReviewState.m */; };
@@ -39,7 +38,8 @@
 		32BC7AD6190DB92500A2407B /* ThreeColumnTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32BC7AD5190DB92500A2407B /* ThreeColumnTableViewCell.m */; };
 		32CC01AE190459E700717C85 /* CardViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC01AD190459E700717C85 /* CardViewerViewController.m */; };
 		32CC01B1190459FD00717C85 /* CardViewerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32CC01B0190459FD00717C85 /* CardViewerTableViewController.m */; };
-		32EDC4E019296A170053349E /* UndoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EDC4DF19296A170053349E /* UndoObject.m */; };
+		32E4C8611E2D491600C3AB0C /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E4C8601E2D491600C3AB0C /* ReviewViewController.swift */; };
+		32E4C8631E2D4CD000C3AB0C /* UndoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E4C8621E2D4CD000C3AB0C /* UndoObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,8 +98,6 @@
 		321ACA1917F76AA400773D4D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		32221CD11B457E5E002A120B /* Memorize-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Memorize-Bridging-Header.h"; sourceTree = "<group>"; };
 		32221CD21B457E5F002A120B /* UserDataControllerHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataControllerHelpers.swift; sourceTree = "<group>"; };
-		3255F58B17FC524D00ECFB02 /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
-		3255F58C17FC524D00ECFB02 /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
 		3255F58E17FC54BC00ECFB02 /* ReviewType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewType.h; sourceTree = "<group>"; };
 		3280003C18F6011000D80DB4 /* UserDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataController.h; sourceTree = "<group>"; };
 		3280003D18F6011000D80DB4 /* UserDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataController.m; sourceTree = "<group>"; };
@@ -121,8 +119,8 @@
 		32CC01AD190459E700717C85 /* CardViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewerViewController.m; sourceTree = "<group>"; };
 		32CC01AF190459FD00717C85 /* CardViewerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewerTableViewController.h; sourceTree = "<group>"; };
 		32CC01B0190459FD00717C85 /* CardViewerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewerTableViewController.m; sourceTree = "<group>"; };
-		32EDC4DE19296A170053349E /* UndoObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UndoObject.h; sourceTree = "<group>"; };
-		32EDC4DF19296A170053349E /* UndoObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UndoObject.m; sourceTree = "<group>"; };
+		32E4C8601E2D491600C3AB0C /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		32E4C8621E2D4CD000C3AB0C /* UndoObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UndoObject.swift; sourceTree = "<group>"; };
 		74B7404CE762929FFEB6DC9C /* Pods-Memorize.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Memorize.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Memorize/Pods-Memorize.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,8 +204,7 @@
 				321AC9ED17F76A7F00773D4D /* Supporting Files */,
 				1191C8D31E059C3000E664E2 /* MasterViewController.swift */,
 				1191C8D51E05AC4000E664E2 /* StatsViewController.swift */,
-				3255F58B17FC524D00ECFB02 /* ReviewViewController.h */,
-				3255F58C17FC524D00ECFB02 /* ReviewViewController.m */,
+				32E4C8601E2D491600C3AB0C /* ReviewViewController.swift */,
 				3255F58E17FC54BC00ECFB02 /* ReviewType.h */,
 				32CC01AC190459E700717C85 /* CardViewerViewController.h */,
 				32CC01AD190459E700717C85 /* CardViewerViewController.m */,
@@ -219,8 +216,7 @@
 				32BC7AD5190DB92500A2407B /* ThreeColumnTableViewCell.m */,
 				321A5D9A1915504500D7D440 /* NSDate+Helpers.h */,
 				321A5D9B1915504500D7D440 /* NSDate+Helpers.m */,
-				32EDC4DE19296A170053349E /* UndoObject.h */,
-				32EDC4DF19296A170053349E /* UndoObject.m */,
+				32E4C8621E2D4CD000C3AB0C /* UndoObject.swift */,
 			);
 			path = Memorize;
 			sourceTree = "<group>";
@@ -487,17 +483,17 @@
 				3280004418F6016F00D80DB4 /* ReviewState.m in Sources */,
 				1191C8D61E05AC4000E664E2 /* StatsViewController.swift in Sources */,
 				32CC01AE190459E700717C85 /* CardViewerViewController.m in Sources */,
-				32EDC4E019296A170053349E /* UndoObject.m in Sources */,
 				321A5D9C1915504500D7D440 /* NSDate+Helpers.m in Sources */,
+				32E4C8611E2D491600C3AB0C /* ReviewViewController.swift in Sources */,
 				32BC7AD3190DA5F000A2407B /* TextEditorViewController.m in Sources */,
 				321AC9FA17F76A7F00773D4D /* Memorize.xcdatamodeld in Sources */,
 				3280003E18F6011000D80DB4 /* UserDataController.m in Sources */,
 				1191C8D41E059C3000E664E2 /* MasterViewController.swift in Sources */,
 				3280004118F6015D00D80DB4 /* Card.m in Sources */,
+				32E4C8631E2D4CD000C3AB0C /* UndoObject.swift in Sources */,
 				32BC7AD6190DB92500A2407B /* ThreeColumnTableViewCell.m in Sources */,
 				32910CEC1B5C644A002596B1 /* AppDelegate.swift in Sources */,
 				32221CD31B457E5F002A120B /* UserDataControllerHelpers.swift in Sources */,
-				3255F58D17FC524D00ECFB02 /* ReviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
