@@ -2,7 +2,7 @@
 //  ReviewViewController.swift
 //  Memorize
 //
-//  Created by Heather Shelley on 1/16/17.
+//  Created by Nick Shelley on 1/16/17.
 //  Copyright © 2017 Mine. All rights reserved.
 //
 

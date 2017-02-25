@@ -2,7 +2,7 @@
 //  MemorizeTests.m
 //  MemorizeTests
 //
-//  Created by Heather Shelley on 9/28/13.
+//  Created by Nick Shelley on 9/28/13.
 //  Copyright (c) 2013 Mine. All rights reserved.
 //
 

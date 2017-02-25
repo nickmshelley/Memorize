@@ -2,7 +2,7 @@
 //  NSDate+Helpers.h
 //  Memorize
 //
-//  Created by Heather Shelley on 5/3/14.
+//  Created by Nick Shelley on 5/3/14.
 //  Copyright (c) 2014 Mine. All rights reserved.
 //
 

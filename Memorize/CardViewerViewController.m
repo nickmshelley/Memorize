@@ -2,7 +2,7 @@
 //  CardViewerViewController.m
 //  Memorize
 //
-//  Created by Heather Shelley on 4/20/14.
+//  Created by Nick Shelley on 4/20/14.
 //  Copyright (c) 2014 Mine. All rights reserved.
 //
 
