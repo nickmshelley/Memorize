@@ -301,7 +301,7 @@
         <!--Card Viewer Table View Controller-->
         <scene sceneID="SDM-zu-P7O">
             <objects>
-                <tableViewController id="1qc-4c-gPe" customClass="CardViewerTableViewController" sceneMemberID="viewController">
+                <tableViewController id="1qc-4c-gPe" customClass="CardViewerTableViewController" customModule="Memorize" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="U8i-hZ-Ezn">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
