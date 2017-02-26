@@ -11,4 +11,3 @@
 #import "ReviewState.h"
 #import "CardViewerTableViewController.h"
 #import "ThreeColumnTableViewCell.h"
-#import "CardViewerViewController.h"

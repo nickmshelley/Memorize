@@ -6,10 +6,11 @@
 //  Copyright (c) 2014 Mine. All rights reserved.
 //
 
+#import "Memorize-Swift.h"
+
 #import "CardViewerTableViewController.h"
 #import "UserDataController.h"
 #import "Card.h"
-#import "CardViewerViewController.h"
 
 @interface CardViewerTableViewController ()
 

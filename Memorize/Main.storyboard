@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="pCc-Y2-bSH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="pCc-Y2-bSH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -182,7 +182,7 @@
         <!--Card Viewer View Controller-->
         <scene sceneID="bzZ-2n-beF">
             <objects>
-                <viewController id="htI-1T-25c" customClass="CardViewerViewController" sceneMemberID="viewController">
+                <viewController id="htI-1T-25c" customClass="CardViewerViewController" customModule="Memorize" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fwB-9o-P6J"/>
                         <viewControllerLayoutGuide type="bottom" id="N1N-mp-7CY"/>
@@ -244,7 +244,7 @@
         <!--Text Editor View Controller-->
         <scene sceneID="hQY-yW-EBm">
             <objects>
-                <viewController id="Vza-WA-zAb" customClass="TextEditorViewController" sceneMemberID="viewController">
+                <viewController id="Vza-WA-zAb" customClass="TextEditorViewController" customModule="Memorize" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="llc-C2-AsY"/>
                         <viewControllerLayoutGuide type="bottom" id="Oax-KW-3aj"/>
@@ -532,9 +532,9 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="q2p-4K-qhN"/>
+        <segue reference="1IR-Y6-DTG"/>
         <segue reference="Al8-uY-73w"/>
+        <segue reference="q2p-4K-qhN"/>
         <segue reference="Ti0-z9-B75"/>
-        <segue reference="QjJ-cQ-3ci"/>
     </inferredMetricsTieBreakers>
 </document>
