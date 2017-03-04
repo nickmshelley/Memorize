@@ -81,9 +81,9 @@ class StatsViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ThreeColumnTableViewCell else { return UITableViewCell() }
         
         let row = sections[indexPath.section][indexPath.row]
-        cell.leftLabel.text = row.leftText
-        cell.middleLabel.text = row.middleText
-        cell.rightLabel.text = row.rightText
+        cell.leftLabel?.text = row.leftText
+        cell.middleLabel?.text = row.middleText
+        cell.rightLabel?.text = row.rightText
         
         return cell
     }

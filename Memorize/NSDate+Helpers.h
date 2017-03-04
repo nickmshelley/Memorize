@@ -11,6 +11,5 @@
 @interface NSDate (Helpers)
 
 + (NSDate *)threeAMToday;
-+ (NSInteger)daysBetweenDate:(NSDate *)fromDateTime andDate:(NSDate *)toDateTime;
 
 @end

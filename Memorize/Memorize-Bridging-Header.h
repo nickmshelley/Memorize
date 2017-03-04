@@ -9,4 +9,3 @@
 #import "ReviewType.h"
 #import "UserDataController.h"
 #import "ReviewState.h"
-#import "ThreeColumnTableViewCell.h"
